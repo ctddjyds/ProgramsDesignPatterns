@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2a6ecf6e-7c1f-40d7-96ad-deb395611e0c" name="DecoratorUML" linkedPackageId="ca84f998-2d74-4bf8-bc52-ede3fb7fe92d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e941bf5c-6d51-4e8b-80c7-fa2fd1c6658c">
+      <elementDefinition Id="c3cf778b-07b2-411c-b5bd-aa721fc36fae" />
+      <body>Component</body>
+      <annotatedElements>
+        <interfaceMoniker Id="f0609db3-7154-427a-acbe-85c766491062" LastKnownName="IDecorator" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="07f19f52-970a-4417-ba13-8902875407ec">
+      <profileInstance Id="5951aa97-64df-4fcb-9ded-77a6384d0911" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4baa2c17-585a-441c-9da0-25fff389c744">
+      <profileInstance Id="d195157a-9201-4683-bc38-418c82c8fded" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f0609db3-7154-427a-acbe-85c766491062" name="IDecorator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1cbfb9b7-3295-4351-bab3-423e4b69cd9b" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ca84f998-2d74-4bf8-bc52-ede3fb7fe92d" name="ModelingProject">
+    <elementDefinition Id="5d4041ac-a294-4a23-b2a7-f8e2bb04ddb9" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="72e10238-4686-4571-8d41-17a3caf12c86" name="ObserverUML" linkedPackageId="bd212c92-df58-477e-bb2c-3ba5479c2f26" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7641bea3-b5f6-4bff-ac31-4e80c54cfd34">
+      <elementDefinition Id="7c451b5d-454d-47c2-a40d-e1191c0dd4fb" />
+      <body>主题接口，对象使用该接口注册/删除观察者
+NotifyObversers用于当状态改变时更新所有观察者</body>
+      <annotatedElements>
+        <interfaceMoniker Id="f807ee9a-fc79-4c60-807e-8531a4a45515" LastKnownName="ISubject" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5fa5ee0f-b891-4ba7-8b92-a2162c1b4f15">
+      <elementDefinition Id="a0cadb97-ae97-4cd9-b7b8-44485d28761b" />
+      <body>所有潜在的具体观察者必须实现的观察者接口，
+Update方法在主题对象状态改变时调用</body>
+      <annotatedElements>
+        <interfaceMoniker Id="7d863154-690b-4052-9958-30fc942dd52e" LastKnownName="IObserver" />
+      </annotatedElements>
+    </comment>
+    <comment Id="b61412e2-46b0-4671-a923-299e2b64f80f">
+      <elementDefinition Id="784afb93-a297-425e-bf91-539605f9017e" />
+      <body>主题类只需知道观察者接口，不需知道具体观察者类的相关细节</body>
+      <annotatedElements>
+        <classMoniker Id="f3e2b357-aec1-40ad-9b8c-a620be3f27f4" LastKnownName="FormSubject" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f329bbcf-6298-4258-8b84-8212bcd6da23">
+      <profileInstance Id="5ff7a844-469b-4c04-825e-9177fa099139" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fd711215-255b-4d80-9e4b-75ad64ce8d75">
+      <profileInstance Id="690a243f-89cf-41fc-99a2-96493063eac6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f807ee9a-fc79-4c60-807e-8531a4a45515" name="ISubject" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="459893aa-f3d9-4bc5-b57c-161e96b03979" />
+        <suppliersInternal>
+          <dependency Id="267f09cd-ef02-4a58-88d2-83ead957ecd4">
+            <interfaceMoniker Id="7d863154-690b-4052-9958-30fc942dd52e" LastKnownName="IObserver" />
+            <elementDefinition Id="49dadd40-58dd-4f8f-8b95-a801ced3e3b1" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="9fc6ae4d-b9eb-4001-a42c-0875105a5611" name="RegisterInterest" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="63eed3a4-8b05-4649-aab1-fa5c0169a8be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b27537e-0fc9-450b-8a0e-9a5fc9468e83" name="observer" direction="In">
+                  <elementDefinition Id="a512d1ab-67bb-4543-81e3-9085a4ef4c0d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9d08802b-fde4-493e-a0e6-0c8c1347af55" LastKnownName="IObserver" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f4ff179b-f010-44cb-a758-cabc6b2a9280" name="UnRegisterInterest" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2c3c7208-8be6-4be9-ad1c-4b430efa202a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4495cbb8-5c77-42c2-9307-c76d3b88bd29" name="observer" direction="In">
+                  <elementDefinition Id="f259b8dc-3bd1-4f80-8790-7a14fe83c021" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9d08802b-fde4-493e-a0e6-0c8c1347af55" LastKnownName="IObserver" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5d94af50-9012-4643-b2d2-b2bc5c496a38" name="NotifyObversers" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c6d4f44-acfd-4117-9d36-21044f7b2966" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7d863154-690b-4052-9958-30fc942dd52e" name="IObserver" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7ff23b2-5ed0-4c8a-a00d-7ee1b81092e6" />
+        <ownedOperations>
+          <operation Id="ee5edac5-0d35-4bd3-b920-4a5df2fb3960" name="Update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="39f4d7cf-d244-42be-9e27-38afb752052b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9bd424f1-f3f5-4e23-85b6-044307b01b6d" name="message" direction="In">
+                  <elementDefinition Id="696cb121-8ddc-41f3-bbc2-c7673df6d44d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ec2481da-3e07-4181-a095-4d1931dc8f0b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f3e2b357-aec1-40ad-9b8c-a620be3f27f4" name="FormSubject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dd3f749e-e9fd-44f2-9a78-8697ca867dc5" />
+        <suppliersInternal>
+          <interfaceRealization Id="8f8ffc30-ac6d-413e-8894-fe649a6b37f8">
+            <interfaceMoniker Id="f807ee9a-fc79-4c60-807e-8531a4a45515" LastKnownName="ISubject" />
+            <elementDefinition Id="eba24bca-fe39-4152-b86b-37c3eaa9e6a8" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="4c6f57b7-2cf3-449f-923d-b303e6011758" isDerived="false" sourceEndRoleName="FormSubject" targetEndRoleName="IObserver" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="7d863154-690b-4052-9958-30fc942dd52e" LastKnownName="IObserver" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="09a2d447-ff91-47f4-bc23-27e6a4abbc41" name="FormSubject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="3317601e-6955-49ee-8f0c-65443cd139b1" name="Lower" value="0">
+                      <elementDefinition Id="ef15fa7b-1a8b-4434-b091-79a401dee00d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c4ed63c6-3128-4f8a-91d5-5480055a265f" name="Upper" value="*">
+                      <elementDefinition Id="eee45855-93c7-416b-9bb6-982b915a9c2f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="1e6a9c88-e717-49a1-92e7-a083e6034920" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4320cb00-b8d8-43b9-acf4-80f742f8287e" name="IObserver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="dd8cd080-67aa-42ca-8d03-5395f5a77bfe" name="Lower" value="0">
+                      <elementDefinition Id="e50be1c7-baef-4de3-84bf-293e983bf02d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="444a0f9a-b260-4395-a663-e961e8670b8c" name="Upper" value="0">
+                      <elementDefinition Id="222802a7-c845-48f1-a880-1cc5767a30e8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0809fe09-e92f-4c48-9512-d8a0411445d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="015c04e1-6704-446c-aade-910a6292abce" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8ead1c7b-a69e-47e9-93f0-5651e9c81148" name="m_observersList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9cbd7ba4-76e3-41b8-b97f-eefa81e04023" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e59753dc-89f5-4951-be22-d08d3c18bf37" LastKnownName="List&lt;IObserver&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="817e4970-a42e-4e40-b97d-2db7b121bf12" name="State" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d9222b48-73ed-437b-9cee-23ec852826bc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e146942e-dfa0-40b8-8ca1-909cb426e47b" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2b3a0d57-a05e-4bf9-a8d0-0fc3ba5fb31b" name="RegisterInterest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3874a15a-822e-48a2-88be-2b5b188e144c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="263db9a9-61a4-4868-ac35-4e4ba959047f" name="observer" direction="In">
+                  <elementDefinition Id="f19582cf-baf8-4f91-b38f-28898aed8d05" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9d08802b-fde4-493e-a0e6-0c8c1347af55" LastKnownName="IObserver" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="beb40286-113b-4076-87b4-82da553352a4" name="UnRegisterInterest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbb76f62-0fdb-49f8-a5fc-3edd7d9dc475" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aeed9b00-9e4e-45a4-8886-3dcaa72f2ac2" name="observer" direction="In">
+                  <elementDefinition Id="7d9ddc47-0376-4858-860e-a9ff19a77726" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9d08802b-fde4-493e-a0e6-0c8c1347af55" LastKnownName="IObserver" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0ec33c05-5140-4805-9a97-7338317fd116" name="NotifyObversers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="07b6d199-3ff4-4a83-98fb-5aa292f8c848" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9d08802b-fde4-493e-a0e6-0c8c1347af55" name="IObserver" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::IObserver">
+        <elementDefinition Id="c7ff23b2-5ed0-4c8a-a00d-7ee1b81092e6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ec2481da-3e07-4181-a095-4d1931dc8f0b" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="315713bc-beb8-4812-9077-4f1717cb5e25" name="ColorObserverForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="72193c84-6c35-41cb-857f-aff32481e3c7" />
+        <suppliersInternal>
+          <interfaceRealization Id="01efa502-e9fa-4bd7-8f70-11f6a82d46d3">
+            <interfaceMoniker Id="7d863154-690b-4052-9958-30fc942dd52e" LastKnownName="IObserver" />
+            <elementDefinition Id="d9d9dd2a-ce63-4c31-a46d-6e56823f7882" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="7baa37df-cea4-4efd-90ee-eb54d727a889" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eae8e153-28f1-4fcb-8d69-6bdbfbf18557" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a66f1ce8-06fb-4808-8aee-b79511df5abf" name="message" direction="In">
+                  <elementDefinition Id="99447e5e-3d19-45ca-8bb5-adeb75832d0a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ec2481da-3e07-4181-a095-4d1931dc8f0b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="80fe5f01-7668-4b80-86a1-08d308edf8bd" name="ListObserverForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23ea5d4b-ac86-4abb-92c1-b9c09248e998" />
+        <suppliersInternal>
+          <interfaceRealization Id="75bbe15d-1af8-497a-9cd8-cc79ef06e677">
+            <interfaceMoniker Id="7d863154-690b-4052-9958-30fc942dd52e" LastKnownName="IObserver" />
+            <elementDefinition Id="954cace4-54df-41af-ad31-39f92610aeae" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="9ed0c2c0-870e-42b3-ad34-f4ac8807a869" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ea8e1a5b-b8b4-4975-abcb-aff12e7b55c7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c5f63cbd-a1f3-4b19-915f-7d7e8e4a9e3d" name="message" direction="In">
+                  <elementDefinition Id="9a0acb62-3a92-4d09-a29f-e96fd4a05686" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ec2481da-3e07-4181-a095-4d1931dc8f0b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e59753dc-89f5-4951-be22-d08d3c18bf37" name="List&lt;IObserver&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;IObserver&gt;">
+        <elementDefinition Id="a45acd60-ac1e-4be0-bbb5-2241c3b0425e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e146942e-dfa0-40b8-8ca1-909cb426e47b" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="bd212c92-df58-477e-bb2c-3ba5479c2f26" name="ModelingProject">
+    <elementDefinition Id="5d4041ac-a294-4a23-b2a7-f8e2bb04ddb9" />
+  </package>
+</logicalClassDesignerModel>

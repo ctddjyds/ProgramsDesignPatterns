@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0dec45f3-c104-49fe-adb3-4ca5cbb0092d" name="BuilderUMLClass" linkedPackageId="c4a5bf74-300f-4d69-91ad-93794d78552f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" name="EquitiesAbstract" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8293ed4f-343e-4829-81db-d1e7983fc4dc" />
+        <ownedAttributesInternal>
+          <property Id="82ea90df-004d-4f72-940e-b6393f046b0e" name="_Array" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="13454bbb-4759-4ba7-9d7e-adf2e5281950" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" LastKnownName="ArrayList" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="aafdca38-bc2a-474d-80d3-c5a103b75d9d" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c1f3c0b-b426-4be6-9683-bb1c3358aa71" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="008131af-875c-43b2-9d1d-00a5fbb4d4d4" direction="Return" isUnique="false">
+                  <elementDefinition Id="0f27da7d-2d70-48da-a7d0-68cf3823f0d7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c6e9aeef-4ab5-4837-adb5-f3f1a54e10ec" name="Count" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="07d0959e-e3fb-46ef-a326-7290136a9368" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c43c588-e679-4d93-8885-15ec02c63094" direction="Return" isUnique="false">
+                  <elementDefinition Id="593f83d5-1b77-4b52-9a53-3d53416f4f1b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="17064cdb-8ac7-4926-9dcb-3d145f97f431" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="06402a34-abed-4e2f-81d4-0fc2cf3ca60c" name="BondsEquities" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5602b3c3-d2c3-4e61-ae35-2fd357d0e306" />
+        <generalsInternal>
+          <generalization Id="f79bd417-705c-4e27-9e52-8901ce04d4d3" isSubstitutable="false">
+            <classMoniker Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" LastKnownName="EquitiesAbstract" />
+            <elementDefinition Id="6d5bb4cf-5610-4b7f-b517-1935eb3716a0" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b587a2de-6f4f-4cba-86ad-a95554ac3e7d" name="Panel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2bb71207-3e02-4b55-905b-e91de4f40666" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba3005cd-f2b7-49f2-9296-ae4dd2886be2" name="ListChoiceBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eccaeaea-1454-4872-aaca-1140e488bf36" />
+        <suppliersInternal>
+          <dependency Id="f041e767-d150-47aa-877f-094e76378336">
+            <classMoniker Id="b587a2de-6f4f-4cba-86ad-a95554ac3e7d" LastKnownName="Panel" />
+            <elementDefinition Id="5d6b46b9-cb62-4726-aad0-88b090821d72" />
+          </dependency>
+          <interfaceRealization Id="b001c73f-4621-4498-903d-d471c5ccc5b2">
+            <interfaceMoniker Id="d8693d8a-6306-4304-99c8-afe632f4ec32" LastKnownName="IChoiceBuilder" />
+            <elementDefinition Id="cfe9e679-1a73-4538-a1ed-0287dd4462f0" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="00681a58-8251-4a5a-9587-e8ef2e51a266" name="m_productPanel" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b2bfb350-cf0d-40b8-802b-0d41c6d87420" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c90f10ba-eabe-41b0-9bfe-b9b160ee5585" LastKnownName="Panel" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c8d3c011-e2e4-46a0-a4e5-bd5adcc93f42" name="getSelected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a2f57dc3-62af-4015-b66c-713904d207da" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="70fdbe73-697f-4bd0-a551-3a0eeb9a4e1c" direction="Return" isUnique="false">
+                  <elementDefinition Id="e6f907dc-0034-4b62-bd1f-b904603389f4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d101d667-8d29-4d39-b5a6-aab57a663fae" name="Clear" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9facda19-d03b-4575-b0ea-8d2fab7611bf" />
+          </operation>
+          <operation Id="d4ba3e9a-c9d6-4435-8fb2-9b2cc4e7e016" name="GetPanelResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="957638c6-6e4a-400d-870a-afc37d36a24b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c780d96f-e1aa-4f90-8d10-04d2d1b96959" direction="Return" isUnique="false">
+                  <elementDefinition Id="2f8ba7ce-4e88-4a08-bcad-6fbd2a91bbd4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00652e03-c2d8-4ed1-a536-6297733f71a8" LastKnownName="Panel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7d73e1c2-7890-482b-bc50-60f1b818c5ce" name="BuilderPanel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a207dc39-fbcc-4244-87c3-3a1a214e11e4" />
+          </operation>
+          <operation Id="a068455e-9f7c-41f7-b78d-2b9c3af7b6ec" name="BuilderArray" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0f1d291c-b960-41bf-915c-cfe42fee054e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="40b7e83c-8285-40cc-9c9e-4c0a856e3aab" name="EquitiesAbstract equities" direction="In" isUnique="false">
+                  <elementDefinition Id="b2ce03fb-e6b4-4484-bf4c-73cf64e7221d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="793438dc-e410-43d6-a0af-2dd5838a9d3c" name="MutualsEquities" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a1da0560-40db-4493-86f3-d344fc535150" />
+        <generalsInternal>
+          <generalization Id="8274606b-608e-474a-bc37-2be4e10030ca" isSubstitutable="false">
+            <classMoniker Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" LastKnownName="EquitiesAbstract" />
+            <elementDefinition Id="f060c336-ecdd-4145-9cea-4cce06a1d51b" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b97402f5-f177-4068-ba1a-e75f80b96ab6" name="StocksEquities" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="102773ba-5fe2-4419-9370-48b32b69745a" />
+        <generalsInternal>
+          <generalization Id="e9e6752c-bebd-41be-a447-8e570d83325a" isSubstitutable="false">
+            <classMoniker Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" LastKnownName="EquitiesAbstract" />
+            <elementDefinition Id="72d77c18-9d40-453d-9f6e-24dcffd9547f" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d8693d8a-6306-4304-99c8-afe632f4ec32" name="IChoiceBuilder" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7495564e-d755-4586-b4b4-1f9bbe513fdf" />
+        <suppliersInternal>
+          <dependency Id="f4c42d0c-7cdb-481b-8f31-7605c57f94c4">
+            <classMoniker Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" LastKnownName="EquitiesAbstract" />
+            <elementDefinition Id="c48ba4a8-10d0-4c1d-abb1-87d24f052a30" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="93e4a88a-6547-4cf6-ba48-314470e07714" name="getSelected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="61a14325-215b-46ba-b709-e4514c238dc6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bd666921-65d6-47f3-9295-27d88f3dd454" direction="Return" isUnique="false">
+                  <elementDefinition Id="618d0f67-98ba-424a-8a23-daaac19ae107" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="77520433-31ae-4ce3-ae8f-61f7ffa90be6" name="Clear" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fa5f43b-4244-46c1-8ced-f25208184870" />
+          </operation>
+          <operation Id="8597a6e1-7474-4367-9083-ee313609a7e3" name="GetPanelResult" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e2832ae7-0bd2-4ea9-ac25-1b25b18fa787" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8d280547-94ba-4d9f-817f-0b3d61222c38" direction="Return" isUnique="false">
+                  <elementDefinition Id="fc27c27c-e2c1-49c2-8c22-b0b30084ec1b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00652e03-c2d8-4ed1-a536-6297733f71a8" LastKnownName="Panel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8e20d729-9b6f-4a33-b36d-e1c0fdb3a482" name="BuilderPanel" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ba16b934-ba60-49c1-9ac2-8a79125fd22b" />
+          </operation>
+          <operation Id="ba140e83-c1c8-43ab-a4a4-62a49a6723fb" name="BuilderArray" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1c58771c-4a2f-4fe4-82a6-8230af23089d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f54e25d7-5955-4eb8-9eb6-0649dcfba7a8" name="EquitiesAbstract equities" direction="In" isUnique="false">
+                  <elementDefinition Id="9b6887a8-db90-4b4d-b95f-83d2305d6c89" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="17064cdb-8ac7-4926-9dcb-3d145f97f431" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="b4943dc0-5bca-48b3-9f96-e8173b8a88fe" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" name="ArrayList" isAbstract="false" isLeaf="false" cachedFullName="ArrayList">
+        <elementDefinition Id="02d83dba-7080-43ad-ad61-59e761153c82" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2ea49a03-cfa0-431e-ad86-cefbb7eec791" name="CheckChoiceBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f42a79e1-6fea-4dec-a473-7fcf67cf19d9" />
+        <suppliersInternal>
+          <interfaceRealization Id="c3e8ef85-1161-4b00-bdb5-fa58c0ad1497">
+            <interfaceMoniker Id="d8693d8a-6306-4304-99c8-afe632f4ec32" LastKnownName="IChoiceBuilder" />
+            <elementDefinition Id="f294fe45-0f4e-413e-b804-6b355a11b461" />
+          </interfaceRealization>
+          <dependency Id="53585b7b-e717-415b-b2a6-fcb2d3e21e77">
+            <classMoniker Id="b587a2de-6f4f-4cba-86ad-a95554ac3e7d" LastKnownName="Panel" />
+            <elementDefinition Id="ee7737e7-ca5b-48ab-b5a2-5b970b599c75" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="8b00a53c-800f-4abf-97e9-0ffa5a99ce48" name="m_productPanel" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c730eb4-d96f-4bdd-b8ff-19baee800798" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6c2e1bfd-79b7-4662-8af8-d7d0ea85fd0e" LastKnownName="Panel" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="32463201-8476-457e-8c69-cc100d86108c" name="getSelected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1b5479d9-7555-4fbd-92f9-77cd875f4f04" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b412e005-1947-4869-9c9f-d8b3ba91558c" direction="Return" isUnique="false">
+                  <elementDefinition Id="51295101-635c-4db9-b7ee-391a081ea744" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="078f59ff-86b0-4c78-b245-4a39b5fc6d82" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="230c0d69-abc6-45de-bffc-c8c4187811bb" name="Clear" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e191662c-a710-4062-8f85-d72e5c16b2c2" />
+          </operation>
+          <operation Id="4af06b5a-8643-4c13-8c7b-0a231bf6acb6" name="GetPanelResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b43508a-d7f0-4111-80c3-68a8680caf6d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="93f023a8-4270-402d-9d16-2c7d183b56b2" direction="Return" isUnique="false">
+                  <elementDefinition Id="a24c51ea-6fd9-47ea-ae6f-0920ca02fcee" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00652e03-c2d8-4ed1-a536-6297733f71a8" LastKnownName="Panel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="aa1daabb-9ecc-4e92-96e1-d7aa4f1763f4" name="BuilderPanel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d53c73bc-124b-4c5c-a768-abf464d0dcb3" />
+          </operation>
+          <operation Id="3dcaaf8e-b95a-4c58-8d1b-a9665064e981" name="BuilderArray" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a1d098d2-d0f4-4b5b-9b0f-c0d34a00676b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="224971b0-df37-49c0-81ce-c14aa924fb86" name="EquitiesAbstract equities" direction="In" isUnique="false">
+                  <elementDefinition Id="e7c808a0-083f-469b-9f0e-006b0eca8775" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2e796188-2f62-4d60-a3b7-6e0faf4998bb" name="DirectorFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5f68fc84-2b25-4a82-bead-4a659bde2abb" />
+        <suppliersInternal>
+          <dependency Id="865a7bbe-e9ba-43bd-bb88-c8671c659d25">
+            <classMoniker Id="df48b2e6-0f18-4c72-b6a3-a77804e0d469" LastKnownName="EquitiesAbstract" />
+            <elementDefinition Id="78e6af16-fbed-4cc6-b845-92b12aaab600" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="15f1290b-b970-4495-af7e-afb144655a52" isDerived="false" sourceEndRoleName="DirectorFactory" targetEndRoleName="IChoiceBuilder" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="d8693d8a-6306-4304-99c8-afe632f4ec32" LastKnownName="IChoiceBuilder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="681f681b-bd02-4bfd-90b8-993823e4db76" name="DirectorFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="0386030b-74f5-44f9-8e0b-75bf89df0333" name="Lower" value="1">
+                      <elementDefinition Id="f33a62c9-e532-4f2e-adb0-94bc9b766d21" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e1c864ef-3ec2-4e96-85b8-15195538d4f0" name="Upper" value="1">
+                      <elementDefinition Id="04ffa201-5242-4ec7-9c1b-62f8ac9952a5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0fd8408d-50ca-4a9c-8041-06b32f43aa72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7500bc61-6fb3-4de1-8235-7a54e3ad01f9" name="IChoiceBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="301bc8b4-13ed-47cf-aceb-c3b7cc5302ce" name="Lower" value="n">
+                      <elementDefinition Id="4114dfaa-0fbd-4f47-aa55-f05532ee597b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7fe5c5de-963c-46f7-8fdb-795c7a0836ae" name="Upper" value="n">
+                      <elementDefinition Id="d8aac457-0b97-47e5-b074-42ac6459a2c4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="77a5de05-a965-4ac0-8c23-399c8ee46d30" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="35ead70a-1217-4617-8b91-5c6b4d497c02" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="79aab5da-610d-471f-aff9-b904d779f410" name="GetBuilder" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="39cc9618-9749-487f-8181-584a369c2cb7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b582cd10-dbb4-4c15-8126-9b7787eea23a" name="EquitiesAbstract equities" direction="In" isUnique="false">
+                  <elementDefinition Id="718cef69-e679-4fe4-b38e-078c8cb4289c" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4f543c43-9592-49b6-9aed-c1328cf338de" direction="Return">
+                  <elementDefinition Id="44cce884-84c7-43da-879e-8535aae3e07a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f58c47b0-532b-401d-9edb-0f4fdd1167f5" LastKnownName="IChoiceBuilder" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f58c47b0-532b-401d-9edb-0f4fdd1167f5" name="IChoiceBuilder" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::IChoiceBuilder">
+        <elementDefinition Id="7495564e-d755-4586-b4b4-1f9bbe513fdf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="00652e03-c2d8-4ed1-a536-6297733f71a8" name="Panel" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Panel">
+        <elementDefinition Id="2bb71207-3e02-4b55-905b-e91de4f40666" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c90f10ba-eabe-41b0-9bfe-b9b160ee5585" name="Panel" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Panel">
+        <elementDefinition Id="2bb71207-3e02-4b55-905b-e91de4f40666" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6c2e1bfd-79b7-4662-8af8-d7d0ea85fd0e" name="Panel" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Panel">
+        <elementDefinition Id="2bb71207-3e02-4b55-905b-e91de4f40666" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c4a5bf74-300f-4d69-91ad-93794d78552f" name="ModelingProject">
+    <elementDefinition Id="5d4041ac-a294-4a23-b2a7-f8e2bb04ddb9" />
+    <profileInstances>
+      <packageHasProfileInstances Id="54025cb5-e5d7-44f7-b0d9-ee232a84efd0">
+        <profileInstance Id="72f054fa-fd75-4959-a311-f81374f0dfec" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="309d5445-b0a2-477e-bb14-93a8dd5991c5">
+        <profileInstance Id="eb717dc5-10e6-4fa5-b7be-ad7bad18a310" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

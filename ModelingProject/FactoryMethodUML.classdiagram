@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f68ac248-ab39-4b77-95f1-4bec74f02632" name="FactoryMethodUML" linkedPackageId="8fc22442-bab0-47db-a443-6c35e9a23a30" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" name="EventCreator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7cf6b3cf-5ced-4f6d-9259-67f0cdc9eac8" />
+        <ownedOperationsInternal>
+          <operation Id="0f306751-9b2a-42dc-91c3-cd198e661da4" name="getSeeding" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e2d7e7c9-7fdc-40f5-9a4d-11fcd7b87c1a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5d66d81-a08a-4f35-85ad-e293655cd9fa" direction="Return">
+                  <elementDefinition Id="9303737e-0d57-47ce-92a4-d8845c35d567" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="40789972-e6fc-474b-a4e8-c25db2a450e8" LastKnownName="SeedingProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a48d68d6-5afa-4da8-b2c9-21891d8e07f5" name="TimedFinalEvent" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="516d8961-fd60-4775-abdb-7a31f6f0141e" />
+        <generalsInternal>
+          <generalization Id="29ed1466-b090-421b-b4b7-cdc249aa9838" isSubstitutable="false">
+            <classMoniker Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" LastKnownName="EventCreator" />
+            <elementDefinition Id="f6faba26-3c0b-45e5-9bbe-a321f78409f7" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="7d2e0359-0122-46c7-ad39-66c1280987fe" name="getSeeding" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a5fd2556-2218-41a7-98b5-8c8198176bdc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7bf85538-ac7d-4bf0-b9f3-4eefa5dd7ef7" direction="Return">
+                  <elementDefinition Id="5ee5aa08-1442-4c00-81f7-45d798d1a40c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0968e5a2-222e-4cfb-b3f5-f8b5e8a72d02" LastKnownName="SeedingProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e8e9e301-c613-441a-9192-602fea74cc2f" name="PrelimEvent" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c580dcc-3156-4b82-85ed-f34e08791d60" />
+        <generalsInternal>
+          <generalization Id="bd41b542-d956-477d-8f5a-0af8c6c64336" isSubstitutable="false">
+            <classMoniker Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" LastKnownName="EventCreator" />
+            <elementDefinition Id="4544c329-40b2-4455-a9b1-569b3518109f" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e835ba56-ca2e-446e-afe7-33c8fd66b58f" name="getSeeding" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="804674cc-5d42-4994-ae93-b7fda7add188" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cb60687a-b742-4f75-b8a3-5843a731b82e" direction="Return">
+                  <elementDefinition Id="89e01f09-a493-4c42-a74c-7b23d70fc33f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6066aff4-23d6-47dd-ad8f-ba15170912a9" LastKnownName="SeedingProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="64860ce4-a96d-423e-ad77-c5cd10d09f26" name="SeedingProduct" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="df0d6ca0-fe70-435f-9d59-c76077793ab0" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="095f4f16-4bb7-4308-9232-9f8cd89b819f" name="StraightSeeding" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f920f281-d567-4454-a445-5f16f8560c7e" />
+        <suppliersInternal>
+          <dependency Id="b3fb3690-9db2-42f3-a548-28e423d97927">
+            <classMoniker Id="a48d68d6-5afa-4da8-b2c9-21891d8e07f5" LastKnownName="TimedFinalEvent" />
+            <elementDefinition Id="02ea953d-8034-40c4-81fd-f64035458843" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="1bb84881-f5f9-4a60-8995-39690138b56f" isSubstitutable="false">
+            <classMoniker Id="64860ce4-a96d-423e-ad77-c5cd10d09f26" LastKnownName="SeedingProduct" />
+            <elementDefinition Id="06910b9b-16b7-4cc7-aa76-7b77d41046d0" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bd9f620e-6911-412d-b750-0feb7cf0a198" name="CircleSeeding" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9e0feff7-7f5e-43e4-8d1a-4de193465d59" />
+        <suppliersInternal>
+          <dependency Id="0352eff7-2bc5-4da4-9f59-de6255a0fe87">
+            <classMoniker Id="e8e9e301-c613-441a-9192-602fea74cc2f" LastKnownName="PrelimEvent" />
+            <elementDefinition Id="d8731ccd-3f4c-440a-946b-45a131fd96f7" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="3735fcba-1170-4e88-9a2d-a1ad33ab75e3" isSubstitutable="false">
+            <classMoniker Id="095f4f16-4bb7-4308-9232-9f8cd89b819f" LastKnownName="StraightSeeding" />
+            <elementDefinition Id="db2f5be3-366b-4aa7-bad4-14e74c69ee44" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e9664fe0-cee1-409d-bb32-8fc28ca9dd5b" name="Swimmer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="80b79bb3-e47a-440b-9914-a6ac5d651859" />
+        <targetEnds>
+          <association Id="233eef71-b725-4881-8625-9ed9f2b9757b" isDerived="false" sourceEndRoleName="Swimmer" targetEndRoleName="EventCreator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" LastKnownName="EventCreator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2bbf4aec-73dd-4b6c-97f6-a34e61da4f33" name="Swimmer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="87e69354-6abb-4461-ab48-d9034140ac2a" name="Lower" value="n">
+                      <elementDefinition Id="9307fc61-b05f-4fda-95da-af7b2c75d85b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9a23c89d-79de-4434-9568-1a85d1d95893" name="Upper" value="n">
+                      <elementDefinition Id="b7acc8dc-db78-4c48-a11b-9bc2a18ab350" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="eaed0b69-cea1-4d1f-a3c0-9e6a07e579e5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f55c68f-0e2d-4ffd-a511-7e72e61bb7be" name="EventCreator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="3a72e5a2-0042-4f13-905a-39e9c50f66d1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="95462d6b-c4ca-45e4-9db4-8901120a2c70" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5255c1a3-12a9-40ec-93dc-ebfebe8a1301" name="FileOperate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c583736b-2e2b-4769-a267-856aa1b59d4d" />
+        <targetEnds>
+          <association Id="d7768e04-bb37-4932-bfea-e8049e9ceea1" isDerived="false" sourceEndRoleName="FileOperate" targetEndRoleName="EventCreator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" LastKnownName="EventCreator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8b94d42-8ea2-4247-b374-5ab59faf4833" name="FileOperate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4894e3d7-9a24-4028-ad99-0aff3110245e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7ed0a71-377f-434f-a036-e27cbe7f31b1" name="EventCreator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="3897cd08-04ab-41f9-b25a-81869123060f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="601a8f7f-6b0e-4405-b910-25cb5e395350" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dec59e22-3c9c-4fb6-a001-73d1688a3c9e" name="StringTokenizer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="444fea54-6bb1-4469-b5e7-069cdb967678" />
+        <targetEnds>
+          <association Id="3b236c53-e0ee-48d7-bc1a-eb8b37801c27" isDerived="false" sourceEndRoleName="StringTokenizer" targetEndRoleName="Swimmer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e9664fe0-cee1-409d-bb32-8fc28ca9dd5b" LastKnownName="Swimmer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e3f753c3-bc70-4e87-a3d3-6388348d5642" name="StringTokenizer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d2ec89ea-9b8d-47f6-ac55-b85c911b6f67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bac5a630-e788-476d-8290-852c30d72e9c" name="Swimmer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="768b461a-e49b-49cd-8b6e-6b668aad1a73" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f415d598-f24c-46e4-aaec-960e28673bb8" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0490c02d-1b8a-4306-973c-db4c409afe0b" name="SeedingForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c75d4e89-6fb3-4157-9b1e-688726ffdba8" />
+        <suppliersInternal>
+          <dependency Id="1a95cc57-5f31-4e13-83d3-d77e839997eb">
+            <classMoniker Id="64860ce4-a96d-423e-ad77-c5cd10d09f26" LastKnownName="SeedingProduct" />
+            <elementDefinition Id="a928d839-e075-4c10-9635-791a9a05d92f" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="829a77af-02e7-46a5-83e1-d61ee6ecf3af" isDerived="false" sourceEndRoleName="SeedingForm" targetEndRoleName="EventCreator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5aa1d517-ea75-485c-ad9b-50f70d5db09e" LastKnownName="EventCreator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7561340d-c6ff-439e-bfeb-90fee816a985" name="SeedingForm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="9cbb4f49-624f-4e2f-9d53-13dae6793ee4" name="Lower" value="n">
+                      <elementDefinition Id="744b7053-30e6-447d-ad57-5ae2f7cf74b9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b4246640-2643-43e0-9f0f-f4328cd0b3b7" name="Upper" value="n">
+                      <elementDefinition Id="5d526388-9a43-46dd-b912-04383c642f54" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="287d1294-798f-4bf2-bd3b-2bfc37aa6f3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="20c3f03d-cd6f-4ac0-b70d-c41337d6881d" name="EventCreator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="3688bb08-13f0-474d-8d0c-d618608ecc7b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f8fce22-457b-47ab-96f5-f04e566b1163" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="40789972-e6fc-474b-a4e8-c25db2a450e8" name="SeedingProduct" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::SeedingProduct">
+        <elementDefinition Id="df0d6ca0-fe70-435f-9d59-c76077793ab0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0968e5a2-222e-4cfb-b3f5-f8b5e8a72d02" name="SeedingProduct" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::SeedingProduct">
+        <elementDefinition Id="df0d6ca0-fe70-435f-9d59-c76077793ab0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6066aff4-23d6-47dd-ad8f-ba15170912a9" name="SeedingProduct" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::SeedingProduct">
+        <elementDefinition Id="df0d6ca0-fe70-435f-9d59-c76077793ab0" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8fc22442-bab0-47db-a443-6c35e9a23a30" name="ModelingProject">
+    <elementDefinition Id="5d4041ac-a294-4a23-b2a7-f8e2bb04ddb9" />
+    <profileInstances>
+      <packageHasProfileInstances Id="95c99113-a7d0-44b0-88b0-d91bced9deab">
+        <profileInstance Id="02431e54-fad6-4c52-bc8f-6dbad499e3f6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b28cbcbf-97e3-4c6b-a860-7d1f6099ea02">
+        <profileInstance Id="2a21bc2f-1e6d-417d-aebd-18f0ed931b16" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
