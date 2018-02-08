@@ -14,36 +14,19 @@ namespace SlashDecorator
 	{
 		private System.Windows.Forms.Button btQuit;
 		private System.Windows.Forms.Button btButtonA;
-		private SlashDeco slash;
-		private CoolDecorator cdec;
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.Container components = null;
+        private RichTextBox richTextBox1;
+        private Button button1;
+        private Button button2;
+
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.Container components = null;
 
 		public DecoratorForm()
-		{
-			
+		{			
 			InitializeComponent();
-			init();
         }
-		private void init()
-        {
-			//save the position of the button
-			Point pt = btButtonA.Location ;
-			//create a cool decorator
-			cdec = new CoolDecorator (btButtonA, btButtonA);
-			//decorate the cool decorator with a slash
-			slash = new SlashDeco (cdec, btButtonA);
-			slash.locate (pt);  
-			//add outside decorator to the layout 
-			//and remove the button from the layout
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {slash});
-			this.Controls.Remove (btButtonA);
-			
-			//this.Controls.AddRange(new System.Windows.Forms.Control[] {cdec});
-			
-		}
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -69,33 +52,64 @@ namespace SlashDecorator
 		{
             this.btButtonA = new System.Windows.Forms.Button();
             this.btQuit = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btButtonA
             // 
-            this.btButtonA.Location = new System.Drawing.Point(38, 34);
+            this.btButtonA.Location = new System.Drawing.Point(12, 154);
             this.btButtonA.Name = "btButtonA";
-            this.btButtonA.Size = new System.Drawing.Size(96, 44);
+            this.btButtonA.Size = new System.Drawing.Size(96, 28);
             this.btButtonA.TabIndex = 1;
-            this.btButtonA.Text = "A button";
+            this.btButtonA.Text = "Not Decorator";
             this.btButtonA.Click += new System.EventHandler(this.btButtonA_Click);
             // 
             // btQuit
             // 
-            this.btQuit.Location = new System.Drawing.Point(192, 34);
+            this.btQuit.Location = new System.Drawing.Point(241, 199);
             this.btQuit.Name = "btQuit";
-            this.btQuit.Size = new System.Drawing.Size(86, 44);
+            this.btQuit.Size = new System.Drawing.Size(57, 28);
             this.btQuit.TabIndex = 0;
             this.btQuit.Text = "Quit";
             this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
             // 
-            // Form1
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(305, 136);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 199);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 28);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Dark Roast";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(125, 154);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 28);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Not Decorator";
+            // 
+            // DecoratorForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.ClientSize = new System.Drawing.Size(329, 239);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btButtonA);
             this.Controls.Add(this.btQuit);
-            this.Name = "Form1";
+            this.Name = "DecoratorForm";
             this.Text = "Cool Decorator";
             this.ResumeLayout(false);
 
@@ -110,7 +124,17 @@ namespace SlashDecorator
 
 		private void btButtonA_Click(object sender, System.EventArgs e)
         {
-			
-		}
-	}
+            Beverage bevarage = new Espresso();
+            this.richTextBox1.Text = string.Format("{0},${1}", bevarage.GetDescription(), bevarage.cost());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Beverage bevarage = new DarkRoast();
+            bevarage = new Mocha(bevarage);//ÓÃmocha×°ÊÎ
+            bevarage = new Mocha(bevarage);
+            bevarage = new Whip(bevarage);
+            this.richTextBox1.Text = string.Format("{0},${1}", bevarage.GetDescription(), bevarage.cost());
+        }
+    }
 }
