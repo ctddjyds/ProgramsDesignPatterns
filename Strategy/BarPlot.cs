@@ -28,31 +28,36 @@ namespace Strategy
 		{
 			InitializeComponent();
 		}
-		public void setPenColor(Color c){
+		public void setPenColor(Color c)
+        {
 			bPen = new Pen(c);
 		}
-		public void plot(float[] xp, float[] yp) {
+		public void plot(float[] xp, float[] yp)
+        {
 			x = xp;
 			y = yp;
 			setPlotBounds();    //compute scaling factors
 			hasData = true;
 			pic.Refresh();
 		}
-		public void findBounds() {
+		public void findBounds()
+        {
 			xmin = max;
 			xmax = -max;
 			ymin = max;
 			ymax = -max;
 
-			for (int i = 0; i<  x.Length ; i++) {
+			for (int i = 0; i<  x.Length ; i++)
+            {
 				if (x[i] > xmax) xmax = x[i];
 				if (x[i] < xmin) xmin = x[i];
 				if (y[i] > ymax) ymax = y[i];
 				if (y[i] < ymin) ymin = y[i];
 			}
 		}
-		public virtual void setPlotBounds() {
-			  findBounds();
+		public virtual void setPlotBounds()
+        {
+			findBounds();
 			//compute scaling factors
 			h = pic.Height;
 			w = pic.Width;
@@ -72,12 +77,14 @@ namespace Strategy
 			colors.Add(new SolidBrush(Color.Yellow));
 		}
 		//-----
-		public int calcx(float xp) {
+		public int calcx(float xp)
+        {
 			int ix = (int)((xp - xmin) * xfactor + xpmin);
 			return ix;
 		}
 		//-----
-		public int calcy(float yp) {
+		public int calcy(float yp)
+        {
 			yp = ((yp - ymin) * yfactor);
 			int iy = h - (int)(ypmax - yp);
 			return iy;
@@ -132,16 +139,19 @@ namespace Strategy
 		}
 		#endregion
 
-		protected virtual void pic_Paint(object sender, PaintEventArgs e) {
+		protected virtual void pic_Paint(object sender, PaintEventArgs e)
+        {
 			Graphics g = e.Graphics;
-			if (hasData) {
-            for (int i = 0; i< x.Length; i++){
-                int ix = calcx(x[i]);
-                int iy = calcy(y[i]);
-                Brush br = (Brush)colors[i];
-				g.FillRectangle(br, ix, h - iy, 20, iy);
-			}
-		}
+			if (hasData)
+            {
+                for (int i = 0; i< x.Length; i++)
+                {
+                    int ix = calcx(x[i]);
+                    int iy = calcy(y[i]);
+                    Brush br = (Brush)colors[i];
+			        g.FillRectangle(br, ix, h - iy, 20, iy);
+			    }
+		    }
 		}
 	}
 }

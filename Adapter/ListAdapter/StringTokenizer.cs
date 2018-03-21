@@ -3,33 +3,40 @@ using System;
 namespace CsharpPats
 {
 	//String Tokenizer class
-	public class StringTokenizer 	{
+	public class StringTokenizer
+    {
 		private string data, delimiter;
 		private string[] tokens;
 		private int index;
-		public StringTokenizer(string dataLine) 		{
+		public StringTokenizer(string dataLine)
+        {
 			init(dataLine, " ");
-				}
-		private void init(String dataLine, string delim) {
+		}
+		private void init(String dataLine, string delim)
+        {
 			delimiter = delim;
 			data = dataLine;
-			tokens = data.Split (delimiter.ToCharArray() );
+			tokens = data.Split(delimiter.ToCharArray());
 			index = 0;
 		}
-		public StringTokenizer(string dataLine, string delim) {
-   		init(dataLine, delim);	
+		public StringTokenizer(string dataLine, string delim)
+        {
+   		    init(dataLine, delim);	
 		}
-		public bool hasMoreElements() {
+		public bool hasMoreElements()
+        {
 			return (index < (tokens.Length));
 		}
-		public string nextToken() {
+		public string nextToken()
+        {
 			return nextElement();
 		}
-		public string nextElement() {
+		public string nextElement()
+        {
 			string s = tokens[index++];
-			while((s.Length <=0) && (index<tokens.Length ))
+			while((s.Length <=0) && (index<tokens.Length))
 				s = tokens[index++];
-		return s;
+		    return s;
 		}
 	}
 }

@@ -24,7 +24,8 @@ namespace Strategy
 			InitializeComponent();
 			init();		
 		}
-		private void init() {
+		private void init()
+        {
 			EventHandler evh = new EventHandler (ButtonClick);
 			btLine.Click += evh;
 			btBar.Click += evh;
@@ -98,7 +99,8 @@ namespace Strategy
 			Application.Run(new StrategyForm());
 		}
 
-		private void ButtonClick(object sender, System.EventArgs e) {
+		private void ButtonClick(object sender, System.EventArgs e)
+        {
 			ICommand comd = (ICommand)sender;
 			comd.Execute ();
 		}

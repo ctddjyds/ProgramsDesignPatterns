@@ -36,7 +36,7 @@ namespace CsharpPats
 			string s = tokens[index++];
 			while((s.Length <=0) && (index<tokens.Length ))
 				s = tokens[index++];
-		return s;
+		    return s;
 		}
 	}
 }

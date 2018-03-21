@@ -10,25 +10,30 @@ namespace ListAdapter
 	public class MyList : System.Windows.Forms.ListBox, IListAdapter
     {
 		private System.ComponentModel.Container components = null;
-	  //-----
-		public MyList() 		{
+	    //-----
+		public MyList()
+        {
 			InitializeComponent();
 		}
 		//-----
-		public void Add(string s) {
+		public void Add(string s)
+        {
 			this.Items.Add (s);
 		}
 		//-----
-		public void Add(Swimmer sw) {
+		public void Add(Swimmer sw)
+        {
 			this.Items.Add (sw.getName() + 
 				"\t" + sw.getAge ().ToString () );
 		}
 		//-----
-		public void Clear() {
+		public void Clear()
+        {
 			this.Items.Clear ();
 		}
 		//-----
-		public void clearSelection() {
+		public void clearSelection()
+        {
 			this.SelectedIndex = -1;
 		}
 		protected override void Dispose( bool disposing )
