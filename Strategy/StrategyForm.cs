@@ -56,36 +56,35 @@ namespace Strategy
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btLine = new Strategy.LineButton();
-			this.btBar = new Strategy.BarButton();
-			this.SuspendLayout();
-			// 
-			// btLine
-			// 
-			this.btLine.Location = new System.Drawing.Point(32, 24);
-			this.btLine.Name = "btLine";
-			this.btLine.Size = new System.Drawing.Size(80, 24);
-			this.btLine.TabIndex = 0;
-			this.btLine.Text = "Line plot";
-			// 
-			// btBar
-			// 
-			this.btBar.Location = new System.Drawing.Point(144, 24);
-			this.btBar.Name = "btBar";
-			this.btBar.Size = new System.Drawing.Size(80, 24);
-			this.btBar.TabIndex = 1;
-			this.btBar.Text = "Bar plot";
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(272, 93);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.btBar,
-																		  this.btLine});
-			this.Name = "Form1";
-			this.Text = "Plot strategies";
-			this.ResumeLayout(false);
+            this.btLine = new Strategy.LineButton();
+            this.btBar = new Strategy.BarButton();
+            this.SuspendLayout();
+            // 
+            // btLine
+            // 
+            this.btLine.Location = new System.Drawing.Point(38, 26);
+            this.btLine.Name = "btLine";
+            this.btLine.Size = new System.Drawing.Size(96, 26);
+            this.btLine.TabIndex = 0;
+            this.btLine.Text = "Line plot";
+            // 
+            // btBar
+            // 
+            this.btBar.Location = new System.Drawing.Point(173, 26);
+            this.btBar.Name = "btBar";
+            this.btBar.Size = new System.Drawing.Size(96, 26);
+            this.btBar.TabIndex = 1;
+            this.btBar.Text = "Bar plot";
+            // 
+            // StrategyForm
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(290, 93);
+            this.Controls.Add(this.btBar);
+            this.Controls.Add(this.btLine);
+            this.Name = "StrategyForm";
+            this.Text = "Plot strategies";
+            this.ResumeLayout(false);
 
 		}
 		#endregion

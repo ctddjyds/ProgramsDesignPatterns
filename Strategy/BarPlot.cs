@@ -112,29 +112,30 @@ namespace Strategy
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pic = new System.Windows.Forms.PictureBox();
-			this.SuspendLayout();
-			// 
-			// pic
-			// 
-			this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pic.Location = new System.Drawing.Point(24, 24);
-			this.pic.Name = "pic";
-			this.pic.Size = new System.Drawing.Size(248, 208);
-			this.pic.TabIndex = 0;
-			this.pic.TabStop = false;
-			this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
-			// 
-			// BarPlot
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(292, 273);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.pic});
-			this.Name = "BarPlot";
-			this.Text = "BarPlot";
-			this.ResumeLayout(false);
+            this.pic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pic
+            // 
+            this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic.Location = new System.Drawing.Point(29, 26);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(297, 224);
+            this.pic.TabIndex = 0;
+            this.pic.TabStop = false;
+            this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
+            // 
+            // BarPlot
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(356, 273);
+            this.Controls.Add(this.pic);
+            this.Name = "BarPlot";
+            this.Text = "BarPlot";
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 		#endregion

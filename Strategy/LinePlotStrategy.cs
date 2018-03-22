@@ -5,7 +5,7 @@ namespace Strategy
 	/// <summary>
 	/// Summary description for LinePlotStrategy.
 	/// </summary>
-	public class LinePlotStrategy : PlotStrategy
+	public class LinePlotStrategy : PlotStrategyAbstract
     {
 		public override void plot(float[] x, float[] y)
         {

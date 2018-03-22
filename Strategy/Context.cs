@@ -9,18 +9,18 @@ namespace Strategy
 	public class Context
     {
 		float[] x, y;
-		PlotStrategy plts;	//strategy selected goes here
+		PlotStrategyAbstract plts;	//strategy selected goes here
 		//-----
 		public void plot()
         {
 			readFile();		//read in data
-			plts.plot (x, y);
+			plts.plot(x, y);
 		}
 		//-----
 		//select bar plot
 		public void setBarPlot()
         {
-			plts = new BarPlotStrategy ();
+			plts = new BarPlotStrategy();
 		}
 		//-----
 		//select line plot

@@ -127,7 +127,7 @@
     <Compile Include="LinePlotStrategy.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PlotStrategy.cs">
+    <Compile Include="PlotStrategyAbstract.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="StringTokenizer.cs">
@@ -135,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="BarPlot.resx">
       <DependentUpon>BarPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinePlot.resx">
+      <DependentUpon>LinePlot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StrategyForm.resx">
       <DependentUpon>StrategyForm.cs</DependentUpon>

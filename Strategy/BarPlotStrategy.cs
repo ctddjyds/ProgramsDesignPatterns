@@ -5,7 +5,7 @@ namespace Strategy
 	/// <summary>
 	/// Summary description for BarPlotStrategy.
 	/// </summary>
-	public class BarPlotStrategy :PlotStrategy
+	public class BarPlotStrategy :PlotStrategyAbstract
 	{
 		public override void plot(float[] xp, float[] yp)
         {
