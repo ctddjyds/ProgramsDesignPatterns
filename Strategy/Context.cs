@@ -15,19 +15,30 @@ namespace Strategy
 		public void plot()
         {
 			readFile();		//read in data
-			plts.plot(x, y);
+			plts.plot(x, y);//根据具体的策略对象，调用其算法的方法
 		}
-		//-----
-		//select bar plot
-		public void setBarPlot()
+		/// <summary>
+		/// 策略模式和简单工厂模式相结合，选择具体实现的职责由Context承担
+		/// </summary>
+		/// <param name="PlotStr"></param>
+		public void setStrategyPlot(string PlotStr)
         {
-			plts = new BarPlotStrategy();
+			switch(PlotStr)
+			{
+				case "Bar":
+					plts = new BarPlotStrategy();
+					break;
+				case "Line":
+					plts = new LinePlotStrategy();
+					break;
+			}
+			
 		}
 		//-----
 		//select line plot
 		public void setLinePlot()
         {
-			plts = new LinePlotStrategy();
+			
 		}
 		//-----
 		public void readFile()

@@ -27,8 +27,8 @@ namespace Strategy
 		}
 		public void Execute()
         {
-		    contxt.setBarPlot();
-            contxt.plot();
+			contxt.setStrategyPlot("Bar");
+			contxt.plot();
 		}
 
 		/// <summary> 
