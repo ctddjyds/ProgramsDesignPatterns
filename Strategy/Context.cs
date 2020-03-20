@@ -3,10 +3,11 @@ using System.Collections ;
 using CsharpPats;
 namespace Strategy
 {
-	/// <summary>
-	/// Selects which plot strategy to carry out
-	/// </summary>
-	public class Context
+    /// <summary>
+    /// Selects which plot strategy to carry out
+    /// 环境角色（Context）：持有一个Strategy类的引用
+    /// </summary>
+    public class Context
     {
 		float[] x, y;
 		PlotStrategyAbstract plts;	//strategy selected goes here
