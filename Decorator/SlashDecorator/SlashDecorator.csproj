@@ -99,9 +99,9 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HouseBlend.cs" />
-    <Compile Include="Decaf.cs" />
-    <Compile Include="DarkRoast.cs" />
+    <Compile Include="HouseBlendBeverage.cs" />
+    <Compile Include="DecafBeverage.cs" />
+    <Compile Include="DarkRoastBeverage.cs" />
     <Compile Include="CondimentDecorator.cs" />
     <Compile Include="Beverage.cs">
       <SubType>Code</SubType>
@@ -109,11 +109,11 @@
     <Compile Include="DecoratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Whip.cs" />
-    <Compile Include="Soy.cs" />
-    <Compile Include="Mocha.cs" />
+    <Compile Include="WhipDecorator.cs" />
+    <Compile Include="SoyDecorator.cs" />
+    <Compile Include="MochaDecorator.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Espresso.cs" />
+    <Compile Include="EspressoBeverage.cs" />
     <Content Include="licenses.licx" />
     <EmbeddedResource Include="DecoratorForm.resx">
       <DependentUpon>DecoratorForm.cs</DependentUpon>

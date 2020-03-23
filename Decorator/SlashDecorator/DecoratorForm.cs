@@ -124,16 +124,16 @@ namespace SlashDecorator
 
 		private void btButtonA_Click(object sender, System.EventArgs e)
         {
-            Beverage bevarage = new Espresso();
+            Beverage bevarage = new EspressoBeverage();
             this.richTextBox1.Text = string.Format("{0},${1}", bevarage.GetDescription(), bevarage.cost());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Beverage bevarage = new DarkRoast();
-            bevarage = new Mocha(bevarage);//用mocha装饰
-            bevarage = new Mocha(bevarage);
-            bevarage = new Whip(bevarage);
+            Beverage bevarage = new DarkRoastBeverage();
+            bevarage = new MochaDecorator(bevarage);//用mocha装饰
+            bevarage = new MochaDecorator(bevarage);
+            bevarage = new WhipDecorator(bevarage);
             this.richTextBox1.Text = string.Format("{0},${1}", bevarage.GetDescription(), bevarage.cost());
         }
     }
