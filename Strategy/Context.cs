@@ -3,31 +3,38 @@ using System.Collections ;
 using CsharpPats;
 namespace Strategy
 {
-	/// <summary>
-	/// Selects which plot strategy to carry out
-	/// </summary>
-	public class Context
+    /// <summary>
+    /// Selects which plot strategy to carry out
+    /// 环境角色（Context）：持有一个Strategy抽象类的引用
+    /// </summary>
+    public class Context
     {
+        /// <summary>
+        /// 策略模式和简单工厂的组合。将实例化具体策略的过程由客户端转移到Context类中
+        /// 客户端只需认识一个类Context，降低耦合，使具体的策略算法和客户端分离
+        /// </summary>
+        /// <param name="strategyName"></param>
+        public Context(string strategyName)
+        {
+            switch(strategyName)
+            {
+                case "BarPlot":
+                    plts = new BarPlotStrategy();
+                    break;
+                case "LinePlot":
+                    plts = new LinePlotStrategy();
+                    break;
+            }
+        }
 		float[] x, y;
 		PlotStrategyAbstract plts;	//strategy selected goes here
-		//-----
+		//-----上下文接口，根据具体的策略对象，调用其算法的方法
 		public void plot()
         {
 			readFile();		//read in data
 			plts.plot(x, y);
 		}
-		//-----
-		//select bar plot
-		public void setBarPlot()
-        {
-			plts = new BarPlotStrategy();
-		}
-		//-----
-		//select line plot
-		public void setLinePlot()
-        {
-			plts = new LinePlotStrategy();
-		}
+		
 		//-----
 		public void readFile()
         {

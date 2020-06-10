@@ -29,9 +29,10 @@ namespace Strategy
 			EventHandler evh = new EventHandler (ButtonClick);
 			btLine.Click += evh;
 			btBar.Click += evh;
-			Context contxt = new Context();
+			Context contxt = new Context("BarPlot");
 			btBar.setContext(contxt);
-			btLine.setContext(contxt);
+            Context contxtLine = new Context("LinePlot");
+            btLine.setContext(contxtLine);
 		}
 
 		/// <summary>
@@ -62,24 +63,26 @@ namespace Strategy
             // 
             // btLine
             // 
-            this.btLine.Location = new System.Drawing.Point(38, 26);
+            this.btLine.CommandName = null;
+            this.btLine.Location = new System.Drawing.Point(63, 39);
             this.btLine.Name = "btLine";
-            this.btLine.Size = new System.Drawing.Size(96, 26);
+            this.btLine.Size = new System.Drawing.Size(160, 39);
             this.btLine.TabIndex = 0;
             this.btLine.Text = "Line plot";
             // 
             // btBar
             // 
-            this.btBar.Location = new System.Drawing.Point(173, 26);
+            this.btBar.CommandName = null;
+            this.btBar.Location = new System.Drawing.Point(288, 39);
             this.btBar.Name = "btBar";
-            this.btBar.Size = new System.Drawing.Size(96, 26);
+            this.btBar.Size = new System.Drawing.Size(160, 39);
             this.btBar.TabIndex = 1;
             this.btBar.Text = "Bar plot";
             // 
             // StrategyForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(290, 93);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(514, 186);
             this.Controls.Add(this.btBar);
             this.Controls.Add(this.btLine);
             this.Name = "StrategyForm";

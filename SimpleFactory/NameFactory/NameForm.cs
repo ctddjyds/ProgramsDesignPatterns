@@ -73,25 +73,25 @@ namespace NameFactory
             // 
             // txName
             // 
-            this.txName.Location = new System.Drawing.Point(14, 42);
+            this.txName.Location = new System.Drawing.Point(23, 63);
             this.txName.Name = "txName";
-            this.txName.Size = new System.Drawing.Size(103, 21);
+            this.txName.Size = new System.Drawing.Size(172, 28);
             this.txName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Location = new System.Drawing.Point(20, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 17);
+            this.label1.Size = new System.Drawing.Size(175, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter name";
             // 
             // btCompute
             // 
-            this.btCompute.Location = new System.Drawing.Point(14, 178);
+            this.btCompute.Location = new System.Drawing.Point(23, 267);
             this.btCompute.Name = "btCompute";
-            this.btCompute.Size = new System.Drawing.Size(87, 25);
+            this.btCompute.Size = new System.Drawing.Size(145, 37);
             this.btCompute.TabIndex = 2;
             this.btCompute.Text = "Compute";
             this.btCompute.Click += new System.EventHandler(this.btCompute_Click);
@@ -99,39 +99,39 @@ namespace NameFactory
             // label2
             // 
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(12, 85);
+            this.label2.Location = new System.Drawing.Point(20, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
+            this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "First";
             // 
             // label3
             // 
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Location = new System.Drawing.Point(20, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.Size = new System.Drawing.Size(65, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Last";
             // 
             // txFirst
             // 
-            this.txFirst.Location = new System.Drawing.Point(50, 81);
+            this.txFirst.Location = new System.Drawing.Point(83, 122);
             this.txFirst.Name = "txFirst";
-            this.txFirst.Size = new System.Drawing.Size(67, 21);
+            this.txFirst.Size = new System.Drawing.Size(112, 28);
             this.txFirst.TabIndex = 4;
             // 
             // txLast
             // 
-            this.txLast.Location = new System.Drawing.Point(50, 137);
+            this.txLast.Location = new System.Drawing.Point(83, 206);
             this.txLast.Name = "txLast";
-            this.txLast.Size = new System.Drawing.Size(67, 21);
+            this.txLast.Size = new System.Drawing.Size(112, 28);
             this.txLast.TabIndex = 4;
             // 
             // NameForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(292, 232);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(292, 344);
             this.Controls.Add(this.txLast);
             this.Controls.Add(this.txFirst);
             this.Controls.Add(this.label3);

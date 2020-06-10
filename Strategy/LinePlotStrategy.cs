@@ -7,6 +7,10 @@ namespace Strategy
 	/// </summary>
 	public class LinePlotStrategy : PlotStrategyAbstract
     {
+        public LinePlotStrategy()
+        {
+            StrategyName = "LinePlot";
+        }
 		public override void plot(float[] x, float[] y)
         {
 			LinePlot lplt = new LinePlot();

@@ -11,7 +11,7 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "Modeling
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedingFactoryMethod", "FactoryMethod\Seeding\SeedingFactoryMethod.csproj", "{9D0C52D9-4599-4EEB-A0F0-1CC8C25F865D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameFactorySimpleFactory", "SimpleFactory\NameFactory\NameFactorySimpleFactory.csproj", "{B8AA1F14-8DB6-4A7B-A024-29B8B49E6CC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactory", "SimpleFactory\NameFactory\SimpleFactory.csproj", "{B8AA1F14-8DB6-4A7B-A024-29B8B49E6CC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksBuilder", "Builder\Stocks\StocksBuilder.csproj", "{A4D8947D-9DF0-4DEE-B158-110D28F0E481}"
 EndProject

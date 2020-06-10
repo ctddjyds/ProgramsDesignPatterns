@@ -27,7 +27,8 @@ namespace Visitor
 			InitializeComponent();
 			init();
 		}
-		private void init() {
+		private void init()
+        {
 			int i = 0;
 			empls = new Employee [7];
 			empls[i++] = new Employee("Susan Bear", 55000, 12, 1);
@@ -70,28 +71,28 @@ namespace Visitor
             // 
             // lsVac
             // 
-            this.lsVac.ItemHeight = 12;
-            this.lsVac.Location = new System.Drawing.Point(38, 34);
+            this.lsVac.ItemHeight = 18;
+            this.lsVac.Location = new System.Drawing.Point(36, 35);
             this.lsVac.Name = "lsVac";
-            this.lsVac.Size = new System.Drawing.Size(260, 196);
+            this.lsVac.Size = new System.Drawing.Size(434, 274);
             this.lsVac.TabIndex = 0;
             // 
             // btCompute
             // 
-            this.btCompute.Location = new System.Drawing.Point(106, 250);
+            this.btCompute.Location = new System.Drawing.Point(177, 375);
             this.btCompute.Name = "btCompute";
-            this.btCompute.Size = new System.Drawing.Size(86, 26);
+            this.btCompute.Size = new System.Drawing.Size(143, 39);
             this.btCompute.TabIndex = 1;
             this.btCompute.Text = "Compute";
             this.btCompute.Click += new System.EventHandler(this.btCompute_Click);
             // 
-            // Form1
+            // VisitorForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(347, 305);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(518, 355);
             this.Controls.Add(this.btCompute);
             this.Controls.Add(this.lsVac);
-            this.Name = "Form1";
+            this.Name = "VisitorForm";
             this.Text = "Visitor demo";
             this.ResumeLayout(false);
 
@@ -107,15 +108,17 @@ namespace Visitor
 			Application.Run(new VisitorForm());
 		}
 
-		private void btCompute_Click(object sender, System.EventArgs e) {
+		private void btCompute_Click(object sender, System.EventArgs e)
+        {
 			VacationVisitor vac = new VacationVisitor();
 			bVacationVisitor bvac = new bVacationVisitor();
-			for (int i = 0;  i< empls.Length; i++) {
+			for (int i = 0;  i< empls.Length; i++)
+            {
 				empls[i].accept(vac);      //get the employee
 				empls[i].accept(bvac);
 			}
-        lsVac.Items.Add("Total vacation days=" + vac.getTotalDays().ToString());
-        lsVac.Items.Add("Total boss vacation days=" + bvac.getTotalDays().ToString());
+            lsVac.Items.Add("Total vacation days=" + vac.getTotalDays().ToString());
+            lsVac.Items.Add("Total boss vacation days=" + bvac.getTotalDays().ToString());
 
 		}
 	}

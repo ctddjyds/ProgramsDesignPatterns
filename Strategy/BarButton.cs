@@ -17,7 +17,14 @@ namespace Strategy
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		private Context contxt;
-		public BarButton()
+
+        public string CommandName
+        {
+            get;
+            set;
+        }
+
+        public BarButton()
 		{
 			InitializeComponent();
 		}
@@ -27,7 +34,6 @@ namespace Strategy
 		}
 		public void Execute()
         {
-		    contxt.setBarPlot();
             contxt.plot();
 		}
 

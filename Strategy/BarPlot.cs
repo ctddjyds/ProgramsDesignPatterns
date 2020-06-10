@@ -120,17 +120,17 @@ namespace Strategy
             // 
             this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic.Location = new System.Drawing.Point(29, 26);
+            this.pic.Location = new System.Drawing.Point(48, 39);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(297, 224);
+            this.pic.Size = new System.Drawing.Size(495, 336);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
             // 
             // BarPlot
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(356, 273);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(585, 407);
             this.Controls.Add(this.pic);
             this.Name = "BarPlot";
             this.Text = "BarPlot";

@@ -102,7 +102,7 @@
   <ItemGroup>
     <Compile Include="AddButterfly.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Butterfly.cs" />
+    <Compile Include="ButterflyAbstract.cs" />
     <Compile Include="CocoonFactory.cs" />
     <Compile Include="Complex.cs" />
     <Compile Include="FirstFirst.cs">

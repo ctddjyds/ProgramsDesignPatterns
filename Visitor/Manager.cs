@@ -12,13 +12,16 @@ namespace Visitor
 			base(nm, slry, vDays, sDays)
 		{
 		}
-		public void setBonusDays(int bd) {
+		public void setBonusDays(int bd)
+        {
 			bonusDays = bd;
 		}
-		public int getBonusDays() {
+		public int getBonusDays()
+        {
 			return bonusDays;
 		}
-		public override void accept(Visitor v) {
+		public override void accept(Visitor v)
+        {
 			v.visit (this);
 		}
 	}

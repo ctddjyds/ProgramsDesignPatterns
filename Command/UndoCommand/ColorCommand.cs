@@ -54,7 +54,7 @@ namespace CommandUndo
 			Pen rpen = new Pen(color, 1);
 			int h = pbox.Height;
 			int w = pbox.Width;
-		//draw all the lines in the list
+		    //draw all the lines in the list
 			for (int i = 0; i < drawList.Count ; i++) {
 				DrawData dl = (DrawData)drawList[i];
 				g.DrawLine(rpen, dl.getX(), dl.getY(), dl.getX() + dx, dl.getDy() + h);

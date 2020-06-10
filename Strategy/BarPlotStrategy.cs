@@ -7,7 +7,11 @@ namespace Strategy
 	/// </summary>
 	public class BarPlotStrategy :PlotStrategyAbstract
 	{
-		public override void plot(float[] xp, float[] yp)
+        public BarPlotStrategy()
+        {
+            StrategyName = "BarPlot";
+        }
+        public override void plot(float[] xp, float[] yp)
         {
 			BarPlot bplot = new BarPlot ();
 			bplot.Show ();
