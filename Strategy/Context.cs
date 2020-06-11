@@ -5,36 +5,41 @@ namespace Strategy
 {
     /// <summary>
     /// Selects which plot strategy to carry out
-    /// 环境角色（Context）：持有一个Strategy抽象类的引用
+    /// 环境角色（Context）：持有一个Strategy类的引用
     /// </summary>
     public class Context
     {
-        /// <summary>
-        /// 策略模式和简单工厂的组合。将实例化具体策略的过程由客户端转移到Context类中
-        /// 客户端只需认识一个类Context，降低耦合，使具体的策略算法和客户端分离
-        /// </summary>
-        /// <param name="strategyName"></param>
-        public Context(string strategyName)
-        {
-            switch(strategyName)
-            {
-                case "BarPlot":
-                    plts = new BarPlotStrategy();
-                    break;
-                case "LinePlot":
-                    plts = new LinePlotStrategy();
-                    break;
-            }
-        }
 		float[] x, y;
 		PlotStrategyAbstract plts;	//strategy selected goes here
-		//-----上下文接口，根据具体的策略对象，调用其算法的方法
+		//-----
 		public void plot()
         {
 			readFile();		//read in data
-			plts.plot(x, y);
+			plts.plot(x, y);//根据具体的策略对象，调用其算法的方法
 		}
-		
+		/// <summary>
+		/// 策略模式和简单工厂模式相结合，选择具体实现的职责由Context承担
+		/// </summary>
+		/// <param name="PlotStr"></param>
+		public void setStrategyPlot(string PlotStr)
+        {
+			switch(PlotStr)
+			{
+				case "Bar":
+					plts = new BarPlotStrategy();
+					break;
+				case "Line":
+					plts = new LinePlotStrategy();
+					break;
+			}
+			
+		}
+		//-----
+		//select line plot
+		public void setLinePlot()
+        {
+			
+		}
 		//-----
 		public void readFile()
         {

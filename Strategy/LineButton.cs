@@ -19,17 +19,13 @@ namespace Strategy
 			InitializeComponent();
 			this.Text = "Line plot";
 		}
-        public string CommandName
-        {
-            get;
-            set;
-        }
-        public void setContext(Context ctx)
+		public void setContext(Context ctx)
         {
 			contxt = ctx;
 		}
 		public void Execute()
         {
+			contxt.setStrategyPlot("Line");
 			contxt.plot();
 		}
 		/// <summary> 
