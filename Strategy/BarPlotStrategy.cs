@@ -9,7 +9,6 @@ namespace Strategy
 	{
         public BarPlotStrategy()
         {
-            StrategyName = "BarPlot";
         }
         public override void plot(float[] xp, float[] yp)
         {

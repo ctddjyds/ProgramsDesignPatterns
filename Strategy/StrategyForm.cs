@@ -63,7 +63,6 @@ namespace Strategy
             // 
             // btLine
             // 
-            this.btLine.CommandName = null;
             this.btLine.Location = new System.Drawing.Point(63, 39);
             this.btLine.Name = "btLine";
             this.btLine.Size = new System.Drawing.Size(160, 39);

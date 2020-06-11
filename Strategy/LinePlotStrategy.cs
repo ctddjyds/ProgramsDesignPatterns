@@ -9,7 +9,6 @@ namespace Strategy
     {
         public LinePlotStrategy()
         {
-            StrategyName = "LinePlot";
         }
 		public override void plot(float[] x, float[] y)
         {
