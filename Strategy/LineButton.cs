@@ -25,7 +25,6 @@ namespace Strategy
 		}
 		public void Execute()
         {
-			contxt.setStrategyPlot("Line");
 			contxt.plot();
 		}
 		/// <summary> 

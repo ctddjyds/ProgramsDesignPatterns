@@ -2,7 +2,7 @@ using System;
 namespace SlashDecorator
 {
 
-    public class HouseBlend : Beverage
+    public class HouseBlend : BeverageAbstract
     {
         public HouseBlend()
         {

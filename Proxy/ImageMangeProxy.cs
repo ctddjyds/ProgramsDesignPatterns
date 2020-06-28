@@ -6,6 +6,7 @@ namespace Proxy
 {
 	/// <summary>
 	/// 使用ImageManageProxy进行代理.
+    /// 为其它对象提供一种代理以控制对这个对象的访问
 	/// </summary>
 	public class ImageMangeProxy:IImageSubject
     {		

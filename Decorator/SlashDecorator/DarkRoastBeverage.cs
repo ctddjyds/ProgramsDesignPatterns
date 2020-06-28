@@ -2,9 +2,9 @@ using System;
 namespace SlashDecorator
 {
 
-    public class DarkRoast : Beverage
+    public class DarkRoastBeverage : BeverageAbstract
     {
-        public DarkRoast()
+        public DarkRoastBeverage()
         {
             _Description = "DarkRoast";
             CustomBeverageSize = BeverageSize.Tall;

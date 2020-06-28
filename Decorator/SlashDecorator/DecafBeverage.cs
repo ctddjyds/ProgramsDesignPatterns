@@ -2,7 +2,7 @@ using System;
 namespace SlashDecorator
 {
 
-    public class Decaf : Beverage
+    public class Decaf : BeverageAbstract
     {
         public Decaf()
         { _Description = "Decaf"; }

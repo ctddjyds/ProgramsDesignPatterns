@@ -2,9 +2,9 @@ using System;
 
 namespace SlashDecorator
 {
-    public class Espresso : Beverage
+    public class EspressoBeverage : BeverageAbstract
     {
-        public Espresso()
+        public EspressoBeverage()
         {
             _Description = "Espresso";
             CustomBeverageSize = BeverageSize.Tall;

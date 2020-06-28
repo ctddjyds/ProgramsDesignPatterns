@@ -5,11 +5,12 @@ using System.Text;
 
 namespace SlashDecorator
 {
-    public class Soy : CondimentDecorator
+    public class SoyDecorator : CondimentDecoratorAbstract
     {
-        private Beverage m_beverage;
-        public Soy(Beverage beverage)
-        { this.m_beverage = beverage; }
+        public SoyDecorator(BeverageAbstract beverage)
+        {
+            this.m_beverage = beverage;
+        }
         public override double cost()
         {
             if(m_beverage.CustomBeverageSize==BeverageSize.Grande)

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SlashDecorator
 {
-    public class Whip : CondimentDecorator
+    public class WhipDecorator : CondimentDecoratorAbstract
     {
-        private Beverage m_beverage;
-        public Whip(Beverage beverage)
+        
+        public WhipDecorator(BeverageAbstract beverage)
         { this.m_beverage = beverage; }
         public override double cost()
         {

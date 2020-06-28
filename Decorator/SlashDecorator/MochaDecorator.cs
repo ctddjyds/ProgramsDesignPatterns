@@ -5,11 +5,12 @@ using System.Text;
 
 namespace SlashDecorator
 {
-    public class Mocha : CondimentDecorator
+    public class MochaDecorator : CondimentDecoratorAbstract
     {
-        private Beverage m_beverage;
-        public Mocha(Beverage beverage)
-        { this.m_beverage = beverage; }
+        public MochaDecorator(BeverageAbstract beverage)
+        {
+            this.m_beverage = beverage;
+        }
         public override double cost()
         {
             return 0.2+m_beverage.cost();

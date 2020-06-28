@@ -9,8 +9,11 @@ namespace SlashDecorator
         Grande,
         Venti,
     }
-
-    public abstract class Beverage
+    /// <summary>
+    /// Component定义一个对象接口
+    /// 无需知道Decorator的存在
+    /// </summary>
+    public abstract class BeverageAbstract
     {
         protected string _Description = "Unknown Beverage";
         public abstract double cost();
