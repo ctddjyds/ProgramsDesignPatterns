@@ -70,25 +70,25 @@ namespace Seeding
             // 
             // lsEvents
             // 
-            this.lsEvents.ItemHeight = 12;
-            this.lsEvents.Location = new System.Drawing.Point(10, 26);
+            this.lsEvents.ItemHeight = 18;
+            this.lsEvents.Location = new System.Drawing.Point(17, 39);
             this.lsEvents.Name = "lsEvents";
-            this.lsEvents.Size = new System.Drawing.Size(134, 64);
+            this.lsEvents.Size = new System.Drawing.Size(223, 76);
             this.lsEvents.TabIndex = 0;
             this.lsEvents.SelectedIndexChanged += new System.EventHandler(this.lsEvents_SelectedIndexChanged);
             // 
             // lsSwimmers
             // 
-            this.lsSwimmers.ItemHeight = 12;
-            this.lsSwimmers.Location = new System.Drawing.Point(173, 26);
+            this.lsSwimmers.ItemHeight = 18;
+            this.lsSwimmers.Location = new System.Drawing.Point(288, 39);
             this.lsSwimmers.Name = "lsSwimmers";
-            this.lsSwimmers.Size = new System.Drawing.Size(230, 172);
+            this.lsSwimmers.Size = new System.Drawing.Size(384, 238);
             this.lsSwimmers.TabIndex = 1;
             // 
             // SeedingForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(427, 220);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(752, 395);
             this.Controls.Add(this.lsSwimmers);
             this.Controls.Add(this.lsEvents);
             this.Name = "SeedingForm";
@@ -110,8 +110,8 @@ namespace Seeding
 		private void lsEvents_SelectedIndexChanged(object sender, System.EventArgs e)
         {
 			int index = lsEvents.SelectedIndex ;
-			EventCreator ev = (EventCreator)events[index];
-			SeedingProduct sd = ev.getSeeding();
+			EventCreatorAbstract ev = (EventCreatorAbstract)events[index];
+			SeedingProductAbstract sd = ev.getSeeding();
 			IEnumerator en  = sd.getSwimmers();
 			lsSwimmers.Items.Clear() ;
 			while(en.MoveNext ())

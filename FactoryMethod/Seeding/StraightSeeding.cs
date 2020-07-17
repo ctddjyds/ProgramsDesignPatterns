@@ -5,7 +5,7 @@ namespace Seeding
 	/// <summary>
 	/// Summary description for StraightSeeding.
 	/// </summary>
-	public class StraightSeeding :SeedingProduct
+	public class StraightSeeding :SeedingProductAbstract
     {
 		protected ArrayList    swimmers;
 		protected Swimmer[] swmrs;

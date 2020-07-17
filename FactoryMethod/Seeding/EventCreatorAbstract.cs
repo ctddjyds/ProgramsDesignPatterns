@@ -4,16 +4,16 @@ using CsharpPats;
 
 namespace Seeding
 {
-	/// <summary>
-	/// Summary description for Event.
-    /// 抽象工厂类
-	/// </summary>
-	public abstract class EventCreator
+    /// <summary>
+    /// Summary description for Event.
+    /// 抽象工厂类--定义一个创建对象的接口，让抽象工厂类的实现类实例化产品类
+    /// </summary>
+    public abstract class EventCreatorAbstract
     {
 		protected int numLanes;
 		protected ArrayList swimmers;
 
-		public EventCreator(string filename, int lanes)
+		public EventCreatorAbstract(string filename, int lanes)
         {
 			numLanes = lanes;
 			swimmers = new ArrayList();
@@ -29,7 +29,7 @@ namespace Seeding
 			}
 			f.close();
 		}
-		public abstract SeedingProduct getSeeding();
+		public abstract SeedingProductAbstract getSeeding();
 		public abstract bool isPrelim();
 		public abstract bool isFinal();
 		public abstract bool isTimedFinal();

@@ -6,7 +6,7 @@ namespace Seeding
 	/// Summary description for Seeding.
     /// 抽象产品类
 	/// </summary>
-	public abstract class SeedingProduct
+	public abstract class SeedingProductAbstract
     {
 		protected int numLanes;                      
 		protected int[] lanes;

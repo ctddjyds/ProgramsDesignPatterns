@@ -103,7 +103,7 @@
     <Compile Include="FileOperate.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EventCreator.cs">
+    <Compile Include="EventCreatorAbstract.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SeedingForm.cs">
@@ -112,7 +112,7 @@
     <Compile Include="PrelimEvent.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SeedingProduct.cs">
+    <Compile Include="SeedingProductAbstract.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="StraightSeeding.cs">

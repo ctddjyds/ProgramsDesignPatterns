@@ -6,12 +6,12 @@ namespace Seeding
 	/// Summary description for PrelimEvent.
     /// 具体工厂类
 	/// </summary>
-	public class PrelimEvent:EventCreator
+	public class PrelimEvent:EventCreatorAbstract
 	{
 		public PrelimEvent(string filename, int lanes):base(filename,lanes)
         {  }
 		//return circle seeding
-		public override SeedingProduct getSeeding()
+		public override SeedingProductAbstract getSeeding()
         {
 			return new CircleSeeding(swimmers, numLanes);
 		}

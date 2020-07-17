@@ -5,12 +5,12 @@ namespace Seeding
 	/// <summary>
 	///class describes an event that will be swum twice
 	/// </summary>
-	public class TimedFinalEvent:EventCreator
+	public class TimedFinalEvent:EventCreatorAbstract
     {	
 		public TimedFinalEvent(string filename, int lanes):base(filename, lanes)
         {}
 		//return StraightSeeding class
-	    public override SeedingProduct getSeeding()
+	    public override SeedingProductAbstract getSeeding()
         {
 			return new StraightSeeding(swimmers, numLanes);
 	    }
