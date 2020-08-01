@@ -66,29 +66,29 @@ public class WealthBuilderForm : Form
             // 
             // lsEquities
             // 
-            this.lsEquities.ItemHeight = 12;
-            this.lsEquities.Location = new System.Drawing.Point(12, 12);
+            this.lsEquities.ItemHeight = 18;
+            this.lsEquities.Location = new System.Drawing.Point(20, 18);
             this.lsEquities.Name = "lsEquities";
-            this.lsEquities.Size = new System.Drawing.Size(216, 124);
+            this.lsEquities.Size = new System.Drawing.Size(360, 166);
             this.lsEquities.TabIndex = 0;
             this.lsEquities.SelectedIndexChanged += new System.EventHandler(this.lsEquities_SelectedIndexChanged);
             // 
             // btPlot
             // 
-            this.btPlot.Location = new System.Drawing.Point(132, 151);
+            this.btPlot.Location = new System.Drawing.Point(220, 226);
             this.btPlot.Name = "btPlot";
-            this.btPlot.Size = new System.Drawing.Size(77, 26);
+            this.btPlot.Size = new System.Drawing.Size(128, 40);
             this.btPlot.TabIndex = 1;
             this.btPlot.Text = "Plot";
             this.btPlot.Click += new System.EventHandler(this.btPlot_Click);
             // 
-            // WealthBuilder
+            // WealthBuilderForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(245, 191);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(406, 289);
             this.Controls.Add(this.btPlot);
             this.Controls.Add(this.lsEquities);
-            this.Name = "WealthBuilder";
+            this.Name = "WealthBuilderForm";
             this.Text = "Stock analysis";
             this.ResumeLayout(false);
 

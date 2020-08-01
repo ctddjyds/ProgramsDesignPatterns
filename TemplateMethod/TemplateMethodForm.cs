@@ -66,15 +66,15 @@ namespace TemplateMethod
             // 
             this.Pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic.Location = new System.Drawing.Point(48, 14);
+            this.Pic.Location = new System.Drawing.Point(101, 38);
             this.Pic.Name = "Pic";
-            this.Pic.Size = new System.Drawing.Size(512, 308);
+            this.Pic.Size = new System.Drawing.Size(410, 264);
             this.Pic.TabIndex = 0;
             this.Pic.TabStop = false;
             // 
             // TemplateMethodForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
             this.ClientSize = new System.Drawing.Size(614, 364);
             this.Controls.Add(this.Pic);
             this.Name = "TemplateMethodForm";
