@@ -12,7 +12,8 @@ namespace State
 			this.Style = ToolBarButtonStyle.ToggleButton ;
 			med.registerArrowButton (this);
 		}
-		public override void Execute() {
+		public override void Execute() 
+		{
 			med.startArrow ();
 		}
 	}

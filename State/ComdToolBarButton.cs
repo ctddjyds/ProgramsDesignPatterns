@@ -10,23 +10,27 @@ namespace State
 	/// <summary>
 	/// Summary description for ComdToolBarButton.
 	/// </summary>
-	public class ComdToolBarButton : ToolBarButton , Command 	{
+	public class ComdToolBarButton : ToolBarButton , Command 	
+	{
 		private System.ComponentModel.Container components = null;
 		protected Mediator med;
 		protected  bool selected;
-		public ComdToolBarButton(string caption, Mediator md) 		{
+		public ComdToolBarButton(string caption, Mediator md) 		
+		{
 			InitializeComponent();
 			med = md;
 			this.Text =caption;
 		}
 		//------
-		public void setSelected(bool b) {
+		public void setSelected(bool b) 
+		{
 			selected = b;
 			if(!selected)
 				this.Pushed =false;
 		}
 		//-----
-		public virtual void Execute() {
+		public virtual void Execute() 
+		{
 		}
 		/// <summary> 
 		/// Clean up any resources being used.

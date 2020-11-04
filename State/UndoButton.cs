@@ -7,9 +7,11 @@ namespace State
 	/// </summary>
 	public class UndoButton :ComdToolBarButton
 	{
-		public UndoButton(Mediator md):base("Undo", md) {
+		public UndoButton(Mediator md):base("Undo", md) 
+		{
 		 }
-		public override void Execute() {
+		public override void Execute() 
+		{
 			med.undo();
 		}
 	}

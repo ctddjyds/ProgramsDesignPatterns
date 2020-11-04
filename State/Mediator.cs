@@ -7,7 +7,8 @@ namespace State
 	/// <summary>
 	/// Summary description for Mediator.
 	/// </summary>
-	public class Mediator 	{
+	public class Mediator 	
+	{
 		private bool startRect;
 		private int selectedIndex;
 		private RectButton rectb;
@@ -22,7 +23,8 @@ namespace State
 		private int selectedDrawing;
 		private StateManager stMgr;
 		//-----
-		public Mediator(PictureBox pic) 		{
+		public Mediator(PictureBox pic) 		
+		{
 			startRect = false;
 			dSelected = false;
 			drawings = new ArrayList();
@@ -32,26 +34,30 @@ namespace State
 			selectedDrawing = -1;
 		}
 		//-----
-		public void startRectangle() {
+		public void startRectangle() 
+		{
 			stMgr.setRect();
 			arrowButton.setSelected(false);
 			circButton.setSelected(false);
 			filButton.setSelected(false);
 		}
 		//-----
-		public void startCircle() {
+		public void startCircle() 
+		{
 			stMgr.setCircle();
 			rectb.setSelected(false);
 			arrowButton.setSelected(false);
 			filButton.setSelected(false);
 		}
 		//------
-		public void startFill() {
+		public void startFill() 
+		{
 			stMgr.setFill();
 			rectb.setSelected(false);
 			circButton.setSelected(false);
 			arrowButton.setSelected(false);
-			if (selectedDrawing >= 0) {
+			if (selectedDrawing >= 0) 
+			{
 				stMgr.selectOne(getDrawing(selectedDrawing));
 				FillMemento m = new FillMemento(selectedDrawing, this);
 				undoList.Add(m);
@@ -59,18 +65,21 @@ namespace State
         repaint();
 		}
 		//-----
-		public void startArrow() {
+		public void startArrow() 
+		{
 			stMgr.setArrow();
 			rectb.setSelected(false);
 			circButton.setSelected(false);
 			filButton.setSelected(false);
 		}
 		//------
-		public Drawing getSelected() {
+		public Drawing getSelected() 
+		{
 			return (Drawing)drawings[selectedDrawing];
 		}
 		//-----
-		public void setSelected(int index) {
+		public void setSelected(int index) 
+		{
 			dSelected = true;
 			selectedDrawing = index;
 			Drawing d = getDrawing(index);
@@ -78,21 +87,25 @@ namespace State
 			repaint();
 		}
 		//-----
-		public void fillSelected() {
-			if (dSelected) {
-            Drawing d = (Drawing)drawings[selectedDrawing];
-            d.setFill(true);
-            FillMemento m = new FillMemento(selectedDrawing, this);
-			undoList.Add(m);
+		public void fillSelected() 
+		{
+			if (dSelected) 
+			{
+				Drawing d = (Drawing)drawings[selectedDrawing];
+				d.setFill(true);
+				FillMemento m = new FillMemento(selectedDrawing, this);
+				undoList.Add(m);
 			}
 		}
 		//-----
-		public void undo() {
+		public void undo() 
+		{
 			rectb.setSelected(false);
 			circButton.setSelected(false);
 			arrowButton.setSelected(false);
         
-			if (undoList.Count > 0) {
+			if (undoList.Count > 0) 
+			{
 				//get last element in undo list
 				object obj = undoList[undoList.Count - 1];
 				undoList.RemoveAt(undoList.Count - 1);
@@ -103,22 +116,26 @@ namespace State
 			}
 		}
 		//-----
-		public ArrayList getDrawings() {
+		public ArrayList getDrawings() 
+		{
 			return drawings;
 		}
-		public Drawing getDrawing(int a ) {
+		public Drawing getDrawing(int a ) 
+		{
 			if(a < drawings.Count )
 				return (Drawing) drawings[a];
 			else
 				return null;
 		}
 		//-----
-		public void addDrawing(Drawing d) {
+		public void addDrawing(Drawing d) 
+		{
 			drawings.Add (d);
 			DrawInstance intc = new DrawInstance(drawings.Count-1, this);
 			undoList.Add(intc);
 		}
-		public void clear() {
+		public void clear() 
+		{
 			drawings = new ArrayList();
 			undoList = new ArrayList();
 			dSelected = false;
@@ -126,11 +143,14 @@ namespace State
 			repaint();
 		}
 		//-----
-		public void unpick() {
+		public void unpick() 
+		{
 			 dSelected = false;
-			if (selectedDrawing >= 0) {
+			if (selectedDrawing >= 0) 
+			{
 				Drawing d = getDrawing(selectedDrawing);
-				if (d != null) {
+				if (d != null) 
+				{
 					d.setSelected(false);
 				}
 				selectedDrawing = -1;
@@ -138,64 +158,79 @@ namespace State
 			}
 		}
 		//-----
-		private void repaint() {
+		private void repaint() 
+		{
 			canvas.Refresh ();
 		}
-		public void registerRectButton(RectButton rb) {
+		public void registerRectButton(RectButton rb) 
+		{
 			rectb = rb;
 		}
-		public void registerFillButton(FillButton fb) {
+		public void registerFillButton(FillButton fb) 
+		{
 			filButton = fb;
 		}
-		public void registerArrowButton (PickButton ab) {
+		public void registerArrowButton (PickButton ab) 
+		{
 			arrowButton = ab;
 		}
-		public void registerCircleButton(CircleButton cb) {
+		public void registerCircleButton(CircleButton cb) 
+		{
 			circButton = cb;
 		}
 		//-----
-		public void removeDrawing(int a) {
+		public void removeDrawing(int a) 
+		{
 			drawings.RemoveAt (a);
 		}
 		//-----
-		public int findDrawing(int x, int y ) {
+		public int findDrawing(int x, int y )
+		{
 			int i = 0;
 			bool found = false;
-        int index = -1;
-			while (i < drawings.Count && ! found) {
+            int index = -1;
+			while (i < drawings.Count && ! found) 
+			{
 				Drawing d = getDrawing(i);
-				if (d.contains(x, y)) {
+				if (d.contains(x, y)) 
+				{
 					index = i;
 					found = true;
 				}
 				i++;
 			}
-        return index;
+            return index;
 		}
 		//-----
-		public void rememberPosition() {
-			if (dSelected) {
+		public void rememberPosition() 
+		{
+			if (dSelected) 
+			{
 				Drawing d  = (Drawing)drawings[selectedDrawing];
 				Memento m = new DrawMemento (d);
 				undoList.Add (m);
 			}
 		}
 		//-----
-		public void mouseUp(int x, int y) {
+		public void mouseUp(int x, int y) 
+		{
 			stMgr.mouseUp (x, y);
 		}
-		public void mouseDown(int x, int y ) {
+		public void mouseDown(int x, int y ) 
+		{
 			stMgr.mouseDown (x, y);
 			repaint();
 		}
-		public void mouseDrag(int x, int y) {
+		public void mouseDrag(int x, int y) 
+		{
 			stMgr.mouseDrag (x, y);
 			repaint();
 		}
 		//-----
-		public void reDraw(Graphics g) {
-			
-			foreach(object obj in drawings) {
+		public void reDraw(Graphics g) 
+		{			
+			foreach(object obj in drawings) 
+			{
 				Drawing d = (Drawing)obj;
 				d.draw(g);
 			}

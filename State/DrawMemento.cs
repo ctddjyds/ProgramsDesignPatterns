@@ -5,13 +5,15 @@ namespace State
 	/// <summary>
 	/// save the state of a visual rectangle
 	/// </summary>
-	public class DrawMemento : Memento 	{
+	public class DrawMemento : Memento 	
+	{
 		private int x, y, w, h;
 		private Rectangle  rect;
 		private Drawing visDraw;
 		//------
-		public DrawMemento(Drawing d) 	{
-			 visDraw = d;
+		public DrawMemento(Drawing d) 	
+		{
+			visDraw = d;
 			rect = visDraw.getRects ();
 			x = rect.x;
 			y = rect.y ;  
@@ -19,7 +21,8 @@ namespace State
 			h = rect.h;
 		}
 		//-----
-		public void restore() {
+		public void restore() 
+		{
 			 //restore the state of a drawing object
 			rect.x = x;
 			rect.y = y;

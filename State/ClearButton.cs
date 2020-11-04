@@ -8,7 +8,8 @@ namespace State
 	public class ClearButton:ComdToolBarButton
 	{
 		public ClearButton(Mediator md):base("Clear", md)	{}
-		public override void Execute() {
+		public override void Execute() 
+		{
 			med.clear();
 		}
 	}

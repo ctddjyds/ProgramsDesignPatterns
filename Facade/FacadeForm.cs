@@ -72,38 +72,38 @@ namespace Facade
             // 
             // btLoad
             // 
-            this.btLoad.Location = new System.Drawing.Point(38, 233);
+            this.btLoad.Location = new System.Drawing.Point(51, 300);
             this.btLoad.Name = "btLoad";
-            this.btLoad.Size = new System.Drawing.Size(77, 25);
+            this.btLoad.Size = new System.Drawing.Size(102, 32);
             this.btLoad.TabIndex = 2;
             this.btLoad.Text = "Load";
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // lsPrices
             // 
-            this.lsPrices.ItemHeight = 12;
-            this.lsPrices.Location = new System.Drawing.Point(240, 26);
+            this.lsPrices.ItemHeight = 15;
+            this.lsPrices.Location = new System.Drawing.Point(320, 33);
             this.lsPrices.Name = "lsPrices";
-            this.lsPrices.Size = new System.Drawing.Size(163, 184);
+            this.lsPrices.Size = new System.Drawing.Size(217, 229);
             this.lsPrices.TabIndex = 1;
             // 
             // lsFoods
             // 
-            this.lsFoods.ItemHeight = 12;
-            this.lsFoods.Location = new System.Drawing.Point(19, 26);
+            this.lsFoods.ItemHeight = 15;
+            this.lsFoods.Location = new System.Drawing.Point(25, 33);
             this.lsFoods.Name = "lsFoods";
-            this.lsFoods.Size = new System.Drawing.Size(144, 184);
+            this.lsFoods.Size = new System.Drawing.Size(192, 229);
             this.lsFoods.TabIndex = 0;
             this.lsFoods.SelectedIndexChanged += new System.EventHandler(this.lsFoods_SelectedIndexChanged);
             // 
-            // Form1
+            // FacadeForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(424, 273);
+            this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
+            this.ClientSize = new System.Drawing.Size(585, 357);
             this.Controls.Add(this.btLoad);
             this.Controls.Add(this.lsPrices);
             this.Controls.Add(this.lsFoods);
-            this.Name = "Form1";
+            this.Name = "FacadeForm";
             this.Text = "Facade Demo";
             this.ResumeLayout(false);
 

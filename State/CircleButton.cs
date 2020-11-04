@@ -12,7 +12,8 @@ namespace State
 			this.Style =ToolBarButtonStyle.ToggleButton ;
 			med.registerCircleButton (this);
 		}
-		public override void Execute() {
+		public override void Execute() 
+		{
 			med.startCircle ();
 		}
 	}

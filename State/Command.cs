@@ -5,7 +5,8 @@ namespace State
 	/// <summary>
 	/// Summary description for Command.
 	/// </summary>
-	public interface Command 	{
+	public interface Command 	
+	{
 		void Execute();
 	}
 }

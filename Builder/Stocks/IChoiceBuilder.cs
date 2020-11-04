@@ -11,7 +11,7 @@ public interface IChoiceBuilder
 	void Clear();
     //getResult
 	Panel GetPanelResult();
-    //builtpart
+    //built part
     void BuilderPanel();
     void BuilderArray(EquitiesAbstract equities);
 }

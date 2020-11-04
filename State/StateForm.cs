@@ -77,43 +77,46 @@ namespace State
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pic = new System.Windows.Forms.PictureBox();
-			this.tBar = new System.Windows.Forms.ToolBar();
-			this.SuspendLayout();
-			// 
-			// pic
-			// 
-			this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pic.Location = new System.Drawing.Point(16, 48);
-			this.pic.Name = "pic";
-			this.pic.Size = new System.Drawing.Size(264, 200);
-			this.pic.TabIndex = 1;
-			this.pic.TabStop = false;
-			this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
-			this.pic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_MouseUp);
-			this.pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_MouseMove);
-			this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
-			// 
-			// tBar
-			// 
-			this.tBar.DropDownArrows = true;
-			this.tBar.Name = "tBar";
-			this.tBar.ShowToolTips = true;
-			this.tBar.Size = new System.Drawing.Size(292, 22);
-			this.tBar.TabIndex = 0;
-			this.tBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.tBar_ButtonClick);
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(292, 273);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.pic,
-																		  this.tBar});
-			this.Name = "Form1";
-			this.Text = "State demo";
-			this.ResumeLayout(false);
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.tBar = new System.Windows.Forms.ToolBar();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pic
+            // 
+            this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic.Location = new System.Drawing.Point(32, 78);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(528, 323);
+            this.pic.TabIndex = 1;
+            this.pic.TabStop = false;
+            this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
+            this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
+            this.pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_MouseMove);
+            this.pic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_MouseUp);
+            // 
+            // tBar
+            // 
+            this.tBar.DropDownArrows = true;
+            this.tBar.Location = new System.Drawing.Point(0, 0);
+            this.tBar.Name = "tBar";
+            this.tBar.ShowToolTips = true;
+            this.tBar.Size = new System.Drawing.Size(617, 42);
+            this.tBar.TabIndex = 0;
+            this.tBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.tBar_ButtonClick);
+            // 
+            // StateForm
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(617, 507);
+            this.Controls.Add(this.pic);
+            this.Controls.Add(this.tBar);
+            this.Name = "StateForm";
+            this.Text = "State demo";
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion

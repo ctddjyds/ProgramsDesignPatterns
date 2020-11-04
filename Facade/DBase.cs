@@ -11,14 +11,18 @@ namespace Facade
 	public abstract class DBase
     {
 		protected OleDbConnection conn;
-		private void openConnection() {
-			if (conn.State == ConnectionState.Closed){
+		private void openConnection()
+        {
+			if (conn.State == ConnectionState.Closed)
+            {
 				conn.Open ();
 			}
 		}
 		//------
-		private void closeConnection() {
-			if (conn.State == ConnectionState.Open ){
+		private void closeConnection()
+        {
+			if (conn.State == ConnectionState.Open )
+            {
 				conn.Close ();
 			}
 		}
@@ -30,23 +34,27 @@ namespace Facade
 			string query = "Select * from " + tableName;
 			adapter.SelectCommand = new OleDbCommand (query, conn);
 			DataSet dset = new DataSet ("mydata");
-			try {
+			try
+            {
 				openConnection();
 				adapter.Fill (dset);
 				dtable = dset.Tables [0];
 			}
-			catch(Exception e) {
+			catch(Exception e)
+            {
 				Console.WriteLine (e.Message );
 			}
 			
 			return dtable;
 		}
 		//------
-		public DataTable openQuery(string query) {
+		public DataTable openQuery(string query)
+        {
 			OleDbDataAdapter dsCmd = new OleDbDataAdapter ();
 			DataSet dset = new DataSet ();	//create a dataset
 			DataTable dtable = null;		//declare a data table
-			try {
+			try
+            {
 				//create the command
 				dsCmd.SelectCommand = new OleDbCommand(query, conn);
 				openConnection();			//open the connection
@@ -57,17 +65,20 @@ namespace Facade
 				closeConnection();			//always close it
 				return dtable;				//and return it
 			}
-			catch (Exception e) {
+			catch (Exception e)
+            {
 				Console.WriteLine (e.Message);
 				return null;
 			}
 		}
 		//------
-		public void openConnection(string connectionString) {
+		public void openConnection(string connectionString)
+        {
 			conn = new OleDbConnection(connectionString);
 		}
 		//------
-		public OleDbConnection getConnection() {
+		public OleDbConnection getConnection()
+        {
 			return conn;
 		}
 	}

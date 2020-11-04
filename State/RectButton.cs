@@ -7,11 +7,13 @@ namespace State
 	/// </summary>
 	public class RectButton :ComdToolBarButton
 	{
-		public RectButton(Mediator md) :base("Rectangle", md) 	{
+		public RectButton(Mediator md) :base("Rectangle", md) 	
+		{
 			this.Style =ToolBarButtonStyle.ToggleButton ;
 			med.registerRectButton (this);
 		}
-		public override void Execute() {
+		public override void Execute() 
+		{
 			med.startRectangle ();
 		}
 	}

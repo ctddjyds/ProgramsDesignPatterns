@@ -5,10 +5,12 @@ namespace State
 	/// <summary>
 	///empty base class containing State methods to override
 	/// </summary>
-	public class State     {
+	public class State     
+	{
 		//keeps state of each button
 		protected Mediator med;
-		public State(Mediator md) {
+		public State(Mediator md) 
+		{
 			med = md;	//save reference to mediator
 		}
 		public virtual void mouseDown(int x, int y) {}

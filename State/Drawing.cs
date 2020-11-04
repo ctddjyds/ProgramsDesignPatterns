@@ -6,7 +6,8 @@ namespace State
 	/// <summary>
 	/// interface defining Drawing object
 	/// </summary>
-	public interface Drawing 	{
+	public interface Drawing 	
+	{
 		void setSelected(bool b);
 		void draw(Graphics g);
 		void move(int xpt, int ypt );

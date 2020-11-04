@@ -40,7 +40,9 @@ public class ListChoiceBuilder:IChoiceBuilder
     { 
 		list.Items.Clear();
 	}
-
+    /// <summary>
+    /// ¹¹½¨Æ÷
+    /// </summary>
     public void BuilderPanel()
     {
         list = new ListBox();

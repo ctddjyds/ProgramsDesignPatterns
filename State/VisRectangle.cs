@@ -6,7 +6,8 @@ namespace State
 	/// <summary>
 	/// Summary description for VisRectangle.
 	/// </summary>
-	public class VisRectangle : Drawing 	{
+	public class VisRectangle : Drawing 	
+	{
 		protected int x, y, w, h;
 		private const int VSIZE=30;
 		private const int HSIZE=40;
@@ -16,9 +17,12 @@ namespace State
 		protected Pen bPen;
 		protected SolidBrush bBrush, rBrush;
 		//-----
-		public VisRectangle(int xp, int yp) 		{
-			x = xp; 			y = yp;
-			w = HSIZE;			h = VSIZE;
+		public VisRectangle(int xp, int yp) 		
+		{
+			x = xp; 			
+			y = yp;
+			w = HSIZE;			
+			h = VSIZE;
 			saveAsRect();
 			bPen = new Pen(Color.Black);
 			bBrush = new SolidBrush(Color.Black);
@@ -26,27 +30,35 @@ namespace State
 		}
 		//-----
 		//used by Memento for saving and restoring state
-		 public CsharpPats.Rectangle getRects() {
+		 public CsharpPats.Rectangle getRects() 
+		{
 			return rect;
 		}
 		//-----
-		 public void setRects(CsharpPats.Rectangle value) {
-				x=value.x;			y=value.y;
-				w=value.w;			h=value.h;
-				saveAsRect();
+		 public void setRects(CsharpPats.Rectangle value) 
+		{
+			x=value.x;			
+			y=value.y;
+			w=value.w;			
+			h=value.h;
+			saveAsRect();
 		}
 		//------
-		public void setSelected(bool b) {
+		public void setSelected(bool b) 
+		{
 			selected = b;
 		}
 		//-----
 		//move to new position
-		public void move(int xp, int yp) {
-			x = xp;  		y = yp;
+		public void move(int xp, int yp) 
+		{
+			x = xp;  		
+			y = yp;
 			saveAsRect();		
 		}
 		//-----
-		public virtual void draw(Graphics g) { 
+		public virtual void draw(Graphics g) 
+		{ 
 			//draw rectangle
 			g.DrawRectangle(bPen, x, y, w, h);
 			if(filled)
@@ -54,8 +66,10 @@ namespace State
 			drawHandles(g);	
 		}
 		//-----
-		public void drawHandles(Graphics g) {
-			if (selected) {   //draw handles
+		public void drawHandles(Graphics g) 
+		{
+			if (selected) 
+			{   //draw handles
 				g.FillRectangle(bBrush, x + w / 2, y - 2, 4, 4);
 				g.FillRectangle(bBrush, x - 2, y + h / 2, 4, 4);
 				g.FillRectangle(bBrush, x + (w / 2), y + h - 2, 4, 4);
@@ -64,15 +78,18 @@ namespace State
 		}
 		//-----
 		//return whether point is inside rectangle
-		public bool contains(int x, int y) {
+		public bool contains(int x, int y) 
+		{
 			return rect.contains (x, y);
 		}
 		//------
 		//create Rectangle object from new position
-		protected void saveAsRect() {
+		protected void saveAsRect() 
+		{
 			rect = new CsharpPats.Rectangle (x,y,w,h);
 		}
-		public void setFill(bool b) {
+		public void setFill(bool b) 
+		{
 			filled = b;
 		}
 	}

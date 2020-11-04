@@ -5,7 +5,8 @@ namespace State
 	/// <summary>
 	/// Summary description for Memento.
 	/// </summary>
-	public interface Memento 	{
+	public interface Memento 	
+	{
 		void restore();
 	}
 }

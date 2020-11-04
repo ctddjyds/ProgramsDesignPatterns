@@ -5,7 +5,7 @@ namespace Facade
 {
 	/// <summary>
 	/// Summary description for DataLoader.
-    /// 外观类
+    /// 外观类--为子系统中的一组接口提供一个一致的界面
 	/// </summary>
 	public class DataLoaderFacade
     {
