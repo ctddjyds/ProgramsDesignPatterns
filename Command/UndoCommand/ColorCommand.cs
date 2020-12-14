@@ -40,7 +40,8 @@ namespace CommandUndo
         {
 			DrawData dl;
 			int index = drawList.Count - 1;
-			if (index >= 0) {
+			if (index >= 0) 
+			{
 				dl = (DrawData)drawList[index];
 				drawList.RemoveAt(index);
 				x = dl.getX();
@@ -55,7 +56,8 @@ namespace CommandUndo
 			int h = pbox.Height;
 			int w = pbox.Width;
 		    //draw all the lines in the list
-			for (int i = 0; i < drawList.Count ; i++) {
+			for (int i = 0; i < drawList.Count ; i++) 
+			{
 				DrawData dl = (DrawData)drawList[i];
 				g.DrawLine(rpen, dl.getX(), dl.getY(), dl.getX() + dx, dl.getDy() + h);
 			}

@@ -15,7 +15,7 @@ namespace ChainOfResponsibility
         {
 			flist = lb;
 		}
-	//-----
+	    //-----
 		public override void sendToChain( string mesg)
         {
 			//if the string matches any part of a filename
@@ -24,14 +24,18 @@ namespace ChainOfResponsibility
 			string fname = mesg + "*.*";
 			files = Directory.GetFiles(Directory.GetCurrentDirectory(), fname);
 			//add them all to the listbox
-			if (files.Length > 0){
-				for (int i = 0; i< files.Length; i++) {
+			if (files.Length > 0)
+			{
+				for (int i = 0; i< files.Length; i++) 
+				{
 					csFile vbf = new csFile(files[i]);
 					flist.Items.Add(vbf.getRootName());
 				}
 			}
-			else {
-				if ( hasChain()) {
+			else 
+			{
+				if ( hasChain()) 
+				{
 					chn.sendToChain(mesg);
 				}
 			}

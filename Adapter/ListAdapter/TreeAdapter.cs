@@ -39,6 +39,7 @@ namespace ListAdapter
 			}
 		}
 		//------
-		public void clearSelection() {}
+		public void clearSelection() 
+		{}
 	}
 }

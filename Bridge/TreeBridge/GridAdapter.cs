@@ -23,7 +23,8 @@ namespace BasicBridge
 		public void Grid_Click(object sender, System.Windows.Forms.MouseEventArgs  e)
         {
 			DataGrid.HitTestInfo hti = grid.HitTest (e.X, e.Y);
-			if(hti.Type  == DataGrid.HitTestType.Cell ){
+			if(hti.Type  == DataGrid.HitTestType.Cell )
+			{
 				row = hti.Row ;
 			}
 		}
@@ -45,11 +46,14 @@ namespace BasicBridge
 		public void Clear()
         {
 			int  count = dTable.Rows.Count ;
-			for(int i=0; i< count; i++) {
+			for(int i=0; i< count; i++) 
+			{
 				dTable.Rows[i].Delete ();
 			}
 		}
 		//-----
-		public void clearSelection() {}
+		public void clearSelection() 
+		{
+		}
 	}
 }

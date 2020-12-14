@@ -7,8 +7,10 @@ namespace Interpreter
 	/// </summary>
 	public class VarMultvarParse : InterpChain
 	{
-		public override bool interpret() {
-			if(topStack(ParseVar.VAR , ParseVar.MULTVAR )) {
+		public override bool interpret() 
+		{
+			if(topStack(ParseVar.VAR , ParseVar.MULTVAR )) 
+			{
 				//reduce Var MultVar to MultVar
 				ParseVar v  =(ParseVar) stk.pop();
 				MultVar mv = (MultVar) stk.pop ();

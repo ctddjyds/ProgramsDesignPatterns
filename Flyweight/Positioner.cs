@@ -34,12 +34,14 @@ namespace Flyweight
 		public void incr()
         {
 			cnt++;
-			if (cnt > rowMax) {	//reset to start new row
+			if (cnt > rowMax) 
+			{	//reset to start new row
 				cnt = 0;
 				x = pLeft;
 				y += VSpace;
 			}
-			else {
+			else 
+			{
 				x += HSpace;
 			}	
 		}

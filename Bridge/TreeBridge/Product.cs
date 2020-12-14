@@ -30,7 +30,7 @@ namespace BasicBridge
 		public int CompareTo(object p)
         {
 			Product prod =(Product) p;
-			return name.CompareTo (prod.getName ());
+			return name.CompareTo(prod.getName());
 		}
 	}
 }

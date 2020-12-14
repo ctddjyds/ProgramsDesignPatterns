@@ -20,34 +20,42 @@ namespace Composite
 			parent = parnt;
 		}
 		//------
-		public IEmployee getBoss() {
+		public IEmployee getBoss() 
+		{
 			return parent;
 		}
 		//------
-		public float getSalary() {
+		public float getSalary() 
+		{
 			return salary;
 		}
 		//------
-		public string getName() {
+		public string getName() 
+		{
 			return name;
 		}
 		//------
-		public bool isLeaf() {
+		public bool isLeaf() 
+		{
 			return subordinates.Count == 0;
 		}
 		//------
-		public virtual void add(string nm, float salary) {
+		public virtual void add(string nm, float salary) 
+		{
 			  throw new Exception("No subordinates in base employee class");
 		}
 		//------
-		public virtual void add(IEmployee emp) {
+		public virtual void add(IEmployee emp) 
+		{
 			throw new Exception("No subordinates in base employee class");
 		}
 		//------
-		public IEnumerator getSubordinates() {
+		public IEnumerator getSubordinates() 
+		{
 			return subordinates.GetEnumerator ();
 		}
-		public virtual IEmployee getChild() {
+		public virtual IEmployee getChild() 
+		{
 			return null;
 		}
 		//------		
@@ -58,7 +66,8 @@ namespace Composite
 			//get the salaries of the boss and subordinates
 			sum = getSalary();
 			IEnumerator enumSub = subordinates.GetEnumerator() ;
-			while (enumSub.MoveNext())  {
+			while (enumSub.MoveNext())  
+			{
 				esub = (IEmployee)enumSub.Current;
 				sum += esub.getSalaries();
 			}

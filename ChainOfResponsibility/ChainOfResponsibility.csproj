@@ -115,7 +115,7 @@
     <Compile Include="ImageChain.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="NoCmd.cs">
+    <Compile Include="NoCmdChain.cs">
       <SubType>Code</SubType>
     </Compile>
     <Content Include="licenses.licx" />

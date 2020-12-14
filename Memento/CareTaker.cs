@@ -14,35 +14,45 @@ namespace Memento
 		{
 			clear(dcol);
 		}
-		public void rememberPosition(VisRectangle vr) {
+		public void rememberPosition(VisRectangle vr) 
+		{
 			mem = new Memento (vr);
 			undoList.Add (mem);
 		}
-		public void clear(ArrayList drw) {
+		public void clear(ArrayList drw) 
+		{
 			drawings = drw;
 			undoList = new ArrayList();
 		}
-		public void Add(int intg) {
+		public void Add(int intg) 
+		{
 			undoList.Add (intg);
 		}
-		public void removeDrawing() {
+		public void removeDrawing() 
+		{
 			drawings.RemoveAt (drawings.Count -1);
 		}
-		public void remove(Memento mem) {
+		public void remove(Memento mem) 
+		{
 			mem.restore ();
 		}
-		public void remove(int intg) {
+		public void remove(int intg) 
+		{
 			removeDrawing();
 		}
-		public void undo() {
-			if(undoList.Count > 0) {
+		public void undo() 
+		{
+			if(undoList.Count > 0) 
+			{
 				int last = undoList.Count -1;
 				object obj = undoList[last];
-				try{
+				try
+				{
 					Memento mem = (Memento)obj;
 					remove(mem);
 				}
-				catch (Exception) {
+				catch (Exception) 
+				{
 					removeDrawing();
 				}
 				undoList.RemoveAt (last);

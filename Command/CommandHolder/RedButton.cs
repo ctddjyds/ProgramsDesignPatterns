@@ -10,16 +10,19 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for RedButton.
 	/// </summary>
-	public class RedButton : System.Windows.Forms.Button, Command 	{
+	public class RedButton : System.Windows.Forms.Button, ICommand 	
+	{
 		//A Command button that turns the background red
 		private System.ComponentModel.Container components = null;
 		//-----
-		public  void Execute() {
+		public  void Execute() 
+		{
 			Control c = this.Parent;
 			c.BackColor =Color.Red ;
 			this.BackColor =Color.LightGray  ;
 		}
-		public RedButton() 		{
+		public RedButton() 		
+		{
 			InitializeComponent();
 		}
 

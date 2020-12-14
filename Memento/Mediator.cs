@@ -58,7 +58,8 @@ namespace Memento
 		//-----
 		public void unpick()
         {
-			if (rectSelected && (selectedIndex >= 0) && (selectedIndex < drawings.Count)) {
+			if (rectSelected && (selectedIndex >= 0) && (selectedIndex < drawings.Count)) 
+			{
 				VisRectangle vis = (VisRectangle) drawings[selectedIndex];
 				vis.setSelected(false);
 				selectedIndex = -1;
@@ -102,26 +103,33 @@ namespace Memento
 			repaint();
 		}
 	//-----
-		private void repaint() {
+		private void repaint() 
+		{
 			canvas.Refresh ();
 		}
 		//-----
-		public void undo() {
+		public void undo() 
+		{
 			caretakr.undo ();
 			repaint();
 		}
 		//-----
-		public void reDraw(Graphics g) {
-			for(int i=0; i < drawings.Count ; i++ ) {
+		public void reDraw(Graphics g) 
+		{
+			for(int i=0; i < drawings.Count ; i++ ) 
+			{
 				VisRectangle v = (VisRectangle)drawings[i];
 				v.draw (g);
 			}
 		}
 		//-----
-		public void drag(int x, int y) {
-			if (rectSelected) {
+		public void drag(int x, int y) 
+		{
+			if (rectSelected) 
+			{
 				VisRectangle v = (VisRectangle)drawings[selectedIndex];
-				if(v.contains (x, y)) {
+				if(v.contains (x, y)) 
+				{
 					v.move (x, y);
 					repaint();
 				}

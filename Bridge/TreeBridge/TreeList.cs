@@ -6,20 +6,24 @@ namespace BasicBridge
 	/// <summary>
 	/// Summary description for GridList.
 	/// </summary>
-	public class TreeList:IVistList 	{
+	public class TreeList:IVistList 	
+	{
 		private TreeView tree;
 		private TreeAdapter gAdapter;
 		//-----
-		public TreeList(TreeView tre) {
+		public TreeList(TreeView tre) 
+		{
 			tree = tre;
 			gAdapter = new TreeAdapter (tree);
 		}
 		//-----
-		public void addLine(Product p) {
+		public void addLine(Product p) 
+		{
 			gAdapter.Add (p);
 		}
 		//-----
-		public void removeLine(int num) {
+		public void removeLine(int num) 
+		{
 		}
 	}
 }

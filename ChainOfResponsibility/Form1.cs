@@ -25,15 +25,17 @@ namespace ChainOfResponsibility
 		private System.ComponentModel.Container components = null;
 		private Chain chn;
 
-		public Form1()		{
+		public Form1()		
+        {
 			InitializeComponent();
 			init();
 		}
-		private void init() {
+		private void init() 
+        {
 			//set up chains
 			ColorChain clrChain = new ColorChain(pnlColor);
 			FileChain flChain = new FileChain(lsFiles);
-			NoCmd noChain = new NoCmd(lsNocmd);
+			NoCmdChain noChain = new NoCmdChain(lsNocmd);
 			//create chain links
 			chn = new ImageChain(picImage);
 			chn.addToChain(clrChain);
@@ -76,67 +78,67 @@ namespace ChainOfResponsibility
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picImage.Location = new System.Drawing.Point(29, 9);
+            this.picImage.Location = new System.Drawing.Point(48, 14);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(182, 146);
+            this.picImage.Size = new System.Drawing.Size(304, 218);
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;
             // 
             // lsFiles
             // 
-            this.lsFiles.ItemHeight = 12;
-            this.lsFiles.Location = new System.Drawing.Point(250, 9);
+            this.lsFiles.ItemHeight = 18;
+            this.lsFiles.Location = new System.Drawing.Point(417, 14);
             this.lsFiles.Name = "lsFiles";
-            this.lsFiles.Size = new System.Drawing.Size(124, 124);
+            this.lsFiles.Size = new System.Drawing.Size(206, 166);
             this.lsFiles.TabIndex = 1;
             // 
             // lsNocmd
             // 
-            this.lsNocmd.ItemHeight = 12;
-            this.lsNocmd.Location = new System.Drawing.Point(413, 9);
+            this.lsNocmd.ItemHeight = 18;
+            this.lsNocmd.Location = new System.Drawing.Point(688, 14);
             this.lsNocmd.Name = "lsNocmd";
-            this.lsNocmd.Size = new System.Drawing.Size(125, 124);
+            this.lsNocmd.Size = new System.Drawing.Size(209, 166);
             this.lsNocmd.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btSend);
             this.groupBox1.Controls.Add(this.txCommand);
-            this.groupBox1.Location = new System.Drawing.Point(29, 172);
+            this.groupBox1.Location = new System.Drawing.Point(48, 258);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(192, 104);
+            this.groupBox1.Size = new System.Drawing.Size(320, 156);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Send commands";
             // 
             // btSend
             // 
-            this.btSend.Location = new System.Drawing.Point(48, 69);
+            this.btSend.Location = new System.Drawing.Point(80, 104);
             this.btSend.Name = "btSend";
-            this.btSend.Size = new System.Drawing.Size(77, 26);
+            this.btSend.Size = new System.Drawing.Size(128, 38);
             this.btSend.TabIndex = 1;
             this.btSend.Text = "Send";
             this.btSend.Click += new System.EventHandler(this.btSend_Click);
             // 
             // txCommand
             // 
-            this.txCommand.Location = new System.Drawing.Point(29, 26);
+            this.txCommand.Location = new System.Drawing.Point(48, 39);
             this.txCommand.Name = "txCommand";
-            this.txCommand.Size = new System.Drawing.Size(134, 21);
+            this.txCommand.Size = new System.Drawing.Size(224, 28);
             this.txCommand.TabIndex = 0;
             // 
             // pnlColor
             // 
             this.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlColor.Location = new System.Drawing.Point(250, 172);
+            this.pnlColor.Location = new System.Drawing.Point(417, 258);
             this.pnlColor.Name = "pnlColor";
-            this.pnlColor.Size = new System.Drawing.Size(134, 104);
+            this.pnlColor.Size = new System.Drawing.Size(223, 156);
             this.pnlColor.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(555, 339);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(924, 451);
             this.Controls.Add(this.pnlColor);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lsNocmd);
@@ -161,7 +163,8 @@ namespace ChainOfResponsibility
 			Application.Run(new Form1());
 		}
 
-		private void btSend_Click(object sender, System.EventArgs e) {
+		private void btSend_Click(object sender, System.EventArgs e) 
+        {
 			chn.sendToChain (txCommand.Text );
 		}
 	}

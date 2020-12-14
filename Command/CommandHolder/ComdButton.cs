@@ -10,19 +10,23 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for ComdButton.
 	/// </summary>
-	public class ComdButton : Button, ICommandHolder 	{
+	public class ComdButton : Button, ICommandHolder 	
+	{
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.Container components = null;
-		private Command command;
-		public ComdButton()		{
-					InitializeComponent();
+		private ICommand command;
+		public ComdButton()		
+		{
+			InitializeComponent();
 		}
-		public void setCommand(Command comd) {
+		public void setCommand(ICommand comd) 
+		{
 			command = comd;
 		}
-		public Command getCommand() {
+		public ICommand getCommand() 
+		{
 			return command;
 		}
 

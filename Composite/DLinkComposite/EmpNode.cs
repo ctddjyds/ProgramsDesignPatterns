@@ -8,11 +8,13 @@ namespace Composite
 	public class EmpNode:TreeNode
     {
 		private IEmployee emp;
-		public EmpNode(IEmployee aemp ):base(aemp.getName ()) {
+		public EmpNode(IEmployee aemp ):base(aemp.getName ()) 
+		{
 			emp = aemp;	
 		}
 		//-----
-		public IEmployee getEmployee() {
+		public IEmployee getEmployee() 
+		{
 			return emp;
 		}
 	}

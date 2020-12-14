@@ -24,7 +24,8 @@ namespace FileredIterator
 		//------
 		public object Current
         {
-			get {
+			get 
+			{
 				return kids[index];
 			}
 		}

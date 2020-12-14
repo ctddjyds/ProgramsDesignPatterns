@@ -8,20 +8,25 @@ namespace Interpreter
 	public class VerbAction : InterpChain
 	{
 		private ArrayList actionList;
-		public VerbAction(ArrayList ar) {
+		public VerbAction(ArrayList ar) 
+		{
 			actionList = ar;
 		}
 		//-----
-		public override bool interpret() {
-			try {
-				if(stk.top().getType() == ParseVerb.VERB ) {
+		public override bool interpret() 
+		{
+			try 
+			{
+				if(stk.top().getType() == ParseVerb.VERB ) 
+				{
 					actionList.Add (stk.pop() );
 					return true;
 				}
 				else
 					return false;
 			}
-			catch(NullReferenceException) {
+			catch(NullReferenceException) 
+			{
 				return false;
 			}
 		}

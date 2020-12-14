@@ -83,9 +83,9 @@ namespace Memento
             // 
             this.pic.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic.Location = new System.Drawing.Point(19, 60);
+            this.pic.Location = new System.Drawing.Point(32, 90);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(307, 207);
+            this.pic.Size = new System.Drawing.Size(511, 310);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
@@ -102,7 +102,7 @@ namespace Memento
             this.tbar.Location = new System.Drawing.Point(0, 0);
             this.tbar.Name = "tbar";
             this.tbar.ShowToolTips = true;
-            this.tbar.Size = new System.Drawing.Size(349, 41);
+            this.tbar.Size = new System.Drawing.Size(580, 47);
             this.tbar.TabIndex = 1;
             this.tbar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.tbar_ButtonClick);
             // 
@@ -122,13 +122,13 @@ namespace Memento
             this.btClear.Name = "btClear";
             this.btClear.Text = "Clear";
             // 
-            // Form1
+            // MementoForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(349, 299);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(580, 444);
             this.Controls.Add(this.tbar);
             this.Controls.Add(this.pic);
-            this.Name = "Form1";
+            this.Name = "MementoForm";
             this.Text = "Memento demo";
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);

@@ -18,15 +18,18 @@ namespace Mediate
 		private System.ComponentModel.Container components = null;
 		private Mediator med;
 		//-----
-		public ClrButton() 		{
+		public ClrButton() 		
+		{
 			InitializeComponent();
 		}
 		//-----
-		public void setMediator(Mediator md) {
+		public void setMediator(Mediator md) 
+		{
 			med = md;
 		}
 		//-----
-		public void Execute() {
+		public void Execute() 
+		{
 			med.clearClicked ();
 		}
 

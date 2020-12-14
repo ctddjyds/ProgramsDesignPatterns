@@ -23,8 +23,10 @@ namespace ChainOfResponsibility
 			csFile fl = new csFile(fname);
 			if(fl.exists()) 
 				picBox.Image = new Bitmap(fname);
-			else{
-				if (hasChain()){	//send off down chain
+			else
+			{
+				if (hasChain())
+				{	//send off down chain
 					chn.sendToChain(mesg);
 				}
 			}

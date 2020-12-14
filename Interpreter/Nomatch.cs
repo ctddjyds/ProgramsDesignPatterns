@@ -7,7 +7,8 @@ namespace Interpreter
 	/// </summary>
 	public class Nomatch :InterpChain
 	{
-		public override bool interpret() {
+		public override bool interpret() 
+		{
 			while(stk.hasMoreElements ())
 				stk.pop ();		//clear off all of stack
 			return true;

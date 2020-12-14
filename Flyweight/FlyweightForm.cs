@@ -57,7 +57,8 @@ namespace Flyweight {
         {
 			Graphics g = e.Graphics;
 			posn.reset ();
-			for(int i = 0; i < names.Count; i++) {
+			for(int i = 0; i < names.Count; i++) 
+			{
 				fol = folFact.getFolder(selectedName.Equals(  (string)names[i]) );
 				fol.draw(g, posn.nextX() , posn.nextY (), (string)names[i]);
 				posn.incr();	  
@@ -69,8 +70,10 @@ namespace Flyweight {
 		/// </summary>
 		protected override void Dispose( bool disposing )
         {
-			if( disposing ) {
-				if (components != null) {
+			if( disposing ) 
+			{
+				if (components != null) 
+				{
 					components.Dispose();
 				}
 			}
@@ -91,19 +94,19 @@ namespace Flyweight {
             // Pic
             // 
             this.Pic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic.Location = new System.Drawing.Point(10, 9);
+            this.Pic.Location = new System.Drawing.Point(17, 14);
             this.Pic.Name = "Pic";
-            this.Pic.Size = new System.Drawing.Size(326, 267);
+            this.Pic.Size = new System.Drawing.Size(543, 400);
             this.Pic.TabIndex = 0;
             this.Pic.TabStop = false;
             this.Pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pic_MouseMove);
             // 
-            // Form1
+            // FlyweightForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(347, 286);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(586, 439);
             this.Controls.Add(this.Pic);
-            this.Name = "Form1";
+            this.Name = "FlyweightForm";
             this.Text = "Flyweight demo";
             ((System.ComponentModel.ISupportInitialize)(this.Pic)).EndInit();
             this.ResumeLayout(false);
@@ -131,7 +134,8 @@ namespace Flyweight {
             {
 				rect.init (posn.nextX() , posn.nextY ());
 				//see if a rectangle contains the mouse
-				if (rect.contains(e.X, e.Y) ){
+				if (rect.contains(e.X, e.Y) )
+				{
 					selectedName = (string)names[i];
 					found = true;
 				}		

@@ -5,14 +5,15 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for ExitCommand.
 	/// </summary>
-	public class ExitCommand : Command 
+	public class ExitCommand : ICommand 
 	{
 		private Form form;
 		public ExitCommand(Form frm)
 		{
 			form = frm;
 		}
-		public void Execute() {
+		public void Execute() 
+		{
 			form.Close ();
 		}
 	}

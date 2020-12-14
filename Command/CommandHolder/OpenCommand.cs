@@ -5,10 +5,12 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for OpenCommand.
 	/// </summary>
-	public class OpenCommand :Command 	{
+	public class OpenCommand :ICommand 	
+	{
 		public OpenCommand()
 		{}
-		public void Execute() {
+		public void Execute() 
+		{
 			OpenFileDialog fd = new OpenFileDialog ();
 			fd.ShowDialog ();
 		}

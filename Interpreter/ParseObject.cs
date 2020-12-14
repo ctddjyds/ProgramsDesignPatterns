@@ -12,14 +12,17 @@ namespace Interpreter
 		public const int MULTVAR=1020;
 
 		protected int value, type;
-		public ParseObject(int val, int typ) 	{
+		public ParseObject(int val, int typ) 	
+		{
 			value = val;
 			type = typ;
 		}
-		public int getValue() {
+		public int getValue() 
+		{
 			return value;
 		}
-		public int getType() {
+		public int getType() 
+		{
 			return type;
 		}
 	}

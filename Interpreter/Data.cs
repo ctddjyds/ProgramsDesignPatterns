@@ -7,12 +7,13 @@ namespace Interpreter
 	/// </summary>
 	public class Data
     {
-	 private Kid[] kids;
+	    private Kid[] kids;
 		public Data(Kid[] kds)
 		{
 			kids = kds;
 		}
-		public Kid[] getData() {
+		public Kid[] getData() 
+		{
 			return kids;
 		}
 	}

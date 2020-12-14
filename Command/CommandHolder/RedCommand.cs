@@ -6,7 +6,8 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for cmdRed.
 	/// </summary>
-	public class RedCommand : Command 	{
+	public class RedCommand : ICommand 	
+	{
 		private Control window;
 		//-----
 		public RedCommand(Control win)
@@ -14,7 +15,8 @@ namespace CHolder
 			window = win;
 		}
 		//-----
-		void Command.Execute () {
+		void ICommand.Execute () 
+		{
 			window.BackColor =Color.Red ;
 		}
 	}

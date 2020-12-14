@@ -26,12 +26,14 @@ namespace ChainOfResponsibility
 		public override void sendToChain(string mesg)
         {
 			mesg = mesg.ToLower ();
-			try {
+			try 
+			{
 				Color c = (Color)colHash[mesg];
 				//if this is a color, put it in the panel
 				panel.BackColor =c;
 			}
-			catch (NullReferenceException e) {
+			catch (NullReferenceException e) 
+			{
 				//send on if this doesn't work
 				sendChain(mesg);
 			}

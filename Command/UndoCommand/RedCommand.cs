@@ -7,8 +7,10 @@ namespace CommandUndo
 	/// <summary>
 	/// Summary description for RedCommand.
 	/// </summary>
-	public class RedCommand : ColorCommand 	{
-		public RedCommand(PictureBox pict):	base(pict){
+	public class RedCommand : ColorCommand 	
+	{
+		public RedCommand(PictureBox pict):	base(pict)
+		{
 			color = Color.Red;
 			x = 0;
 			dx = 20;

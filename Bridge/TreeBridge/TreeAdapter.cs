@@ -17,11 +17,11 @@ namespace BasicBridge
 		public void Add(Product p)
         {
 			TreeNode nod;
-        //add a root node  
+			//add a root node  
 			nod = tree.Nodes.Add(p.getName());
-        //add a child node to it
-        nod.Nodes.Add(p.getQuantity ());
-        tree.ExpandAll ();
+			//add a child node to it
+			nod.Nodes.Add(p.getQuantity ());
+			tree.ExpandAll ();
 		}
 		//------
 		public int SelectedIndex()
@@ -31,8 +31,9 @@ namespace BasicBridge
 		//------
 		public void Clear()
         {
-		TreeNode nod;
-			for (int i=0; i< tree.Nodes.Count ; i++) {
+		    TreeNode nod;
+			for (int i=0; i< tree.Nodes.Count ; i++) 
+			{
 				nod = tree.Nodes [i];
 				nod.Remove ();
 			}

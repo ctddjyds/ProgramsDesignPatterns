@@ -22,7 +22,8 @@ namespace BasicBridge
 			}
 			for(int i=0; i < max ; i++)
             {
-				for (int j=i; j < max; j++) {
+				for (int j=i; j < max; j++) 
+				{
 					if(prod[i].CompareTo (prod[j])>0)
                     {
 						Product pt = prod[i];

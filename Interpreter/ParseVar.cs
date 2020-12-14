@@ -6,7 +6,8 @@ namespace Interpreter
 	/// <summary>
 	/// Summary description for ParseVar.
 	/// </summary>
-	public class ParseVar: ParseObject {
+	public class ParseVar: ParseObject 
+	{
 		public const int FRNAME = 1;
 		public const int LNAME = 2;
 		public const int AGE = 3;
@@ -17,7 +18,8 @@ namespace Interpreter
 		private static Hashtable hash, keyhash;
 		
 		//-----
-		static  ParseVar() {
+		static  ParseVar() 
+		{
 			hash = new Hashtable ();
 			keyhash = new Hashtable ();
 			hash.Add("frname", FRNAME);
@@ -32,27 +34,33 @@ namespace Interpreter
 			keyhash.Add (TIME, "time");		
 		}
 		//-------------
-		static public string getTableName(int key) {
+		static public string getTableName(int key) 
+		{
 			return (string) keyhash[key];
 		}
 		//-----
-		static public int computeValue(string s) {
+		static public int computeValue(string s) 
+		{
 			int v = 0;
-			try {
+			try 
+			{
 				v =(int) hash[s];
 				return v;
 			}
-			catch (NullReferenceException ) {
+			catch (NullReferenceException ) 
+			{
 				v = -1;
 				return v;
 			}	
 		} 
 		//------
-		public bool isLegal() {
+		public bool isLegal() 
+		{
 			return value >= 0;
 		}
 		//----------
-		public ParseVar(string s) :base(-1, VAR)	{
+		public ParseVar(string s) :base(-1, VAR)	
+		{
 			value = ParseVar.computeValue (s.ToLower() );
 		}
 	}

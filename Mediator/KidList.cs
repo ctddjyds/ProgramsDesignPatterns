@@ -15,15 +15,18 @@ namespace Mediate
 		private System.ComponentModel.Container components = null;
 		private Mediator med;
 		//-----
-		public KidList() 		{
+		public KidList() 		
+		{
 			InitializeComponent();
 		}
 		//-----
-		public void Execute() {
+		public void Execute() 
+		{
 			med.kidPicked ();
 		}
 		//-----
-		public void setMediator(Mediator md) {
+		public void setMediator(Mediator md) 
+		{
 			med = md;
 		}
 		/// <summary> 

@@ -25,7 +25,8 @@ namespace Flyweight
 			fnt = new Font("Arial", 12);
 		}
 		//-----
-		public void draw(Graphics g, int x, int y, string title) {
+		public void draw(Graphics g, int x, int y, string title) 
+		{
 			g.FillRectangle(backBrush, x, y, w, h);
 			g.DrawRectangle(blackPen, x, y, w, h);
 			g.DrawLine(whitePen, x + 1, y + 1, x + w - 1, y + 1);

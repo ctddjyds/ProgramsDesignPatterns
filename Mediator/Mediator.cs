@@ -24,19 +24,23 @@ namespace Mediate
 			kds = new KidData ("50free.txt");	//create data list class
 			clearClicked();				//clear all controls
 			KidIterator kiter = kds.getIterator ();
-			while(kiter.MoveNext () ) {		//load list box
+			while(kiter.MoveNext () ) 
+			{		
+				//load list box
 				Kid kd = (Kid) kiter.Current ;
 				klist.Items .Add (kd.getFrname() +" "+kd.getLname ());
 			}
 		}
-		//-----
+
 		//get text box reference
-			public void setText(TextBox tx) {
-				txKids = tx;
-			}
+		public void setText(TextBox tx) 
+		{
+			txKids = tx;
+		}
 		//-----
 		//clear lists and set buttons to disabled
-		public void clearClicked() {
+		public void clearClicked() 
+		{
 			//disable buttons and clear list
 			cpButton.Enabled = false;
 			clrButton.Enabled = false;
@@ -44,7 +48,8 @@ namespace Mediate
 		}
 		//-----
 		//copy data from text box to list box
-		public void copyClicked() {
+		public void copyClicked() 
+		{
 			 //copy name to picked list
 			pkList.Items.Add(txKids.Text);
 			//clear button enabled
@@ -54,7 +59,8 @@ namespace Mediate
 		//-----
 		//copy selected kid to text box
 		//enable copy button
-		public void kidPicked() {
+		public void kidPicked() 
+		{
 			//copy text from list to textbox
 			txKids.Text = klist.Text;
 			//copy button enabled

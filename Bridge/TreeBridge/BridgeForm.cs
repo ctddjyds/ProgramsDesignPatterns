@@ -25,7 +25,8 @@ namespace BasicBridge
         private DataGrid grdProd;
         private System.Windows.Forms.Label label2;
 	
-		public BridgeForm() 		{
+		public BridgeForm() 		
+        {
 			InitializeComponent();
 			init();
 		}
@@ -55,7 +56,8 @@ namespace BasicBridge
 			csFile fl = new csFile("products.txt");
 			fl.OpenForRead ();
 			string s = fl.readLine ();
-			while(s != null ) {
+			while(s != null ) 
+            {
 				Product p = new Product(s);
 				products.Add (p);
 				s = fl.readLine ();
@@ -94,19 +96,19 @@ namespace BasicBridge
             // 
             // lsProd
             // 
-            this.lsProd.ItemHeight = 12;
-            this.lsProd.Location = new System.Drawing.Point(19, 43);
+            this.lsProd.ItemHeight = 18;
+            this.lsProd.Location = new System.Drawing.Point(32, 64);
             this.lsProd.Name = "lsProd";
-            this.lsProd.Size = new System.Drawing.Size(154, 184);
+            this.lsProd.Size = new System.Drawing.Size(256, 274);
             this.lsProd.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(19, 17);
+            this.label1.Location = new System.Drawing.Point(32, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 17);
+            this.label1.Size = new System.Drawing.Size(225, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer view";
             // 
@@ -114,17 +116,17 @@ namespace BasicBridge
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(230, 17);
+            this.label2.Location = new System.Drawing.Point(383, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 17);
+            this.label2.Size = new System.Drawing.Size(274, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Executive view";
             // 
             // treeProd
             // 
-            this.treeProd.Location = new System.Drawing.Point(221, 52);
+            this.treeProd.Location = new System.Drawing.Point(368, 78);
             this.treeProd.Name = "treeProd";
-            this.treeProd.Size = new System.Drawing.Size(182, 172);
+            this.treeProd.Size = new System.Drawing.Size(304, 258);
             this.treeProd.TabIndex = 4;
             // 
             // grdProd
@@ -132,22 +134,22 @@ namespace BasicBridge
             this.grdProd.CaptionVisible = false;
             this.grdProd.DataMember = "";
             this.grdProd.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.grdProd.Location = new System.Drawing.Point(19, 248);
+            this.grdProd.Location = new System.Drawing.Point(32, 372);
             this.grdProd.Name = "grdProd";
             this.grdProd.RowHeadersVisible = false;
-            this.grdProd.Size = new System.Drawing.Size(192, 190);
+            this.grdProd.Size = new System.Drawing.Size(320, 285);
             this.grdProd.TabIndex = 5;
             // 
-            // Form1
+            // BridgeForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(498, 496);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(719, 678);
             this.Controls.Add(this.grdProd);
             this.Controls.Add(this.treeProd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lsProd);
-            this.Name = "Form1";
+            this.Name = "BridgeForm";
             this.Text = "Sorted bridge";
             ((System.ComponentModel.ISupportInitialize)(this.grdProd)).EndInit();
             this.ResumeLayout(false);

@@ -74,58 +74,59 @@ namespace CommandUndo
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btUndo = new CommandUndo.CommandButton();
-			this.btBlue = new CommandUndo.CommandButton();
-			this.pBox = new System.Windows.Forms.PictureBox();
-			this.btRed = new CommandUndo.CommandButton();
-			this.SuspendLayout();
-			// 
-			// btUndo
-			// 
-			this.btUndo.Location = new System.Drawing.Point(136, 272);
-			this.btUndo.Name = "btUndo";
-			this.btUndo.Size = new System.Drawing.Size(56, 32);
-			this.btUndo.TabIndex = 2;
-			this.btUndo.Text = "Undo";
-			// 
-			// btBlue
-			// 
-			this.btBlue.Location = new System.Drawing.Point(240, 272);
-			this.btBlue.Name = "btBlue";
-			this.btBlue.Size = new System.Drawing.Size(64, 32);
-			this.btBlue.TabIndex = 3;
-			this.btBlue.Text = "Blue";
-			// 
-			// pBox
-			// 
-			this.pBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.pBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pBox.Location = new System.Drawing.Point(32, 16);
-			this.pBox.Name = "pBox";
-			this.pBox.Size = new System.Drawing.Size(272, 248);
-			this.pBox.TabIndex = 0;
-			this.pBox.TabStop = false;
-			// 
-			// btRed
-			// 
-			this.btRed.Location = new System.Drawing.Point(24, 272);
-			this.btRed.Name = "btRed";
-			this.btRed.Size = new System.Drawing.Size(56, 32);
-			this.btRed.TabIndex = 1;
-			this.btRed.Text = "Red";
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(336, 317);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.btBlue,
-																		  this.btUndo,
-																		  this.btRed,
-																		  this.pBox});
-			this.Name = "Form1";
-			this.Text = "Undo command demo";
-			this.ResumeLayout(false);
+            this.btUndo = new CommandUndo.CommandButton();
+            this.btBlue = new CommandUndo.CommandButton();
+            this.pBox = new System.Windows.Forms.PictureBox();
+            this.btRed = new CommandUndo.CommandButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btUndo
+            // 
+            this.btUndo.Location = new System.Drawing.Point(272, 439);
+            this.btUndo.Name = "btUndo";
+            this.btUndo.Size = new System.Drawing.Size(112, 52);
+            this.btUndo.TabIndex = 2;
+            this.btUndo.Text = "Undo";
+            // 
+            // btBlue
+            // 
+            this.btBlue.Location = new System.Drawing.Point(480, 439);
+            this.btBlue.Name = "btBlue";
+            this.btBlue.Size = new System.Drawing.Size(128, 52);
+            this.btBlue.TabIndex = 3;
+            this.btBlue.Text = "Blue";
+            // 
+            // pBox
+            // 
+            this.pBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pBox.Location = new System.Drawing.Point(64, 26);
+            this.pBox.Name = "pBox";
+            this.pBox.Size = new System.Drawing.Size(544, 400);
+            this.pBox.TabIndex = 0;
+            this.pBox.TabStop = false;
+            // 
+            // btRed
+            // 
+            this.btRed.Location = new System.Drawing.Point(48, 439);
+            this.btRed.Name = "btRed";
+            this.btRed.Size = new System.Drawing.Size(112, 52);
+            this.btRed.TabIndex = 1;
+            this.btRed.Text = "Red";
+            // 
+            // Form1
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(670, 526);
+            this.Controls.Add(this.btBlue);
+            this.Controls.Add(this.btUndo);
+            this.Controls.Add(this.btRed);
+            this.Controls.Add(this.pBox);
+            this.Name = "Form1";
+            this.Text = "Undo command demo";
+            ((System.ComponentModel.ISupportInitialize)(this.pBox)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 		#endregion

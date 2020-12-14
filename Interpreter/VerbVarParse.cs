@@ -7,8 +7,10 @@ namespace Interpreter
 	/// </summary>
 	public class VerbVarParse : InterpChain
 	{
-		public override bool interpret() {
-			if(topStack(ParseObject.VAR , ParseObject.VERB )) {
+		public override bool interpret() 
+		{
+			if(topStack(ParseObject.VAR , ParseObject.VERB )) 
+			{
 				addArgsToVerb();
 				return true;
 			}

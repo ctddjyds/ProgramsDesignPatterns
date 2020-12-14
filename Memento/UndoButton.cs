@@ -15,11 +15,13 @@ namespace Memento
 		private ToolBarButton ubutton;
 		private Mediator med;
 
-		public UndoButton(Mediator md, ToolBarButton but) 	{
+		public UndoButton(Mediator md, ToolBarButton but) 	
+		{
 			med = md;
 			ubutton = but;
 		}
-		public void Execute() {
+		public void Execute() 
+		{
 			med.undo ();
 		}
 		

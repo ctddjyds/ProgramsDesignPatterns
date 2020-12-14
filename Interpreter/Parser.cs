@@ -16,7 +16,8 @@ namespace Interpreter
 		private ListBox ptable;
 		private IChain chn;
 
-		public Parser(string line, KidData kd, ListBox pt) 		{
+		public Parser(string line, KidData kd, ListBox pt) 		
+		{
 			stk = new Stack ();
 			actionList = new ArrayList ();
 			setData(kd, pt);
@@ -24,7 +25,8 @@ namespace Interpreter
 			buildChain();
 		}
 		//-----
-		private void buildChain() {
+		private void buildChain() 
+		{
 			chn = new VarVarParse(); //start of chain
 			VarMultvarParse vmvp = new VarMultvarParse();
 			chn.addToChain(vmvp);
@@ -40,45 +42,55 @@ namespace Interpreter
 			va.addToChain (nom);
 		}
 		//-----
-		public void setData(KidData kd, ListBox pt) {
+		public void setData(KidData kd, ListBox pt) 
+		{
 			dat = new Data(kd.getData ());
 			ptable = pt;
 		}
 		//-----
-		public void Execute() {
-			while(stk.hasMoreElements () ) {
+		public void Execute() 
+		{
+			while(stk.hasMoreElements () ) 
+			{
 				chn.sendToChain (stk);
 			}
 			//now execute the verbs
-			for(int i=0; i< actionList.Count ; i++ ) {
+			for(int i=0; i< actionList.Count ; i++ ) 
+			{
 				Verb v = (Verb)actionList[i];
 				v.setData (dat, ptable);
 				v.Execute ();
 			}
 		}
 		//-----
-		private void buildStack(string s) {
+		private void buildStack(string s) 
+		{
 			StringTokenizer tok = new StringTokenizer (s);
-			while(tok.hasMoreElements () ) {
+			while(tok.hasMoreElements () ) 
+			{
 				ParseObject token = tokenize(tok.nextToken ());
 				stk.push (token);
 			}
 		}
 		//-----
-		protected ParseObject tokenize(string s) {
+		protected ParseObject tokenize(string s) 
+		{
 			ParseObject obj;
 			int type;
-			try {
+			try 
+			{
 				obj = getVerb(s);
 				type = obj.getType ();
 			}
-			catch(NullReferenceException) {
+			catch(NullReferenceException) 
+			{
 				obj = getVar(s);
 			}
 			return obj;
 		}
 		//-----
-		protected ParseVerb getVerb(string s) {
+		protected ParseVerb getVerb(string s) 
+		{
 			ParseVerb v = new ParseVerb (s, dat, ptable);
 			if(v.isLegal () )
 				return v.getVerb (s);
@@ -86,7 +98,8 @@ namespace Interpreter
 				return null;
 		}
 		//-----
-		protected ParseVar getVar(string s) {
+		protected ParseVar getVar(string s) 
+		{
 			ParseVar v = new ParseVar (s);
 			if( v.isLegal())
 				return v;

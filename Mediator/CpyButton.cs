@@ -10,19 +10,23 @@ namespace Mediate
 	/// <summary>
 	/// Button command passes its click to the mediator
 	/// </summary>
-	public class CpyButton : System.Windows.Forms.Button, Command 	{
+	public class CpyButton : System.Windows.Forms.Button, Command 	
+	{
 		private Container components = null;
 		private Mediator med;
 		//-----
-		public CpyButton() 		{
+		public CpyButton() 		
+		{
 			InitializeComponent();
 		}
 		//-----
-		public void setMediator(Mediator md) {
+		public void setMediator(Mediator md) 
+		{
 			med = md;
 		}
 		//-----
-		public void Execute() {
+		public void Execute() 
+		{
 			med.copyClicked ();
 		}
 		/// <summary> 

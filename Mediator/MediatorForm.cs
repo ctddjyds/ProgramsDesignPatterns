@@ -67,64 +67,65 @@ namespace Mediate
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.txName = new System.Windows.Forms.TextBox();
-			this.lsSelected = new System.Windows.Forms.ListBox();
-			this.lsKids = new Mediate.KidList();
-			this.btCopy = new Mediate.CpyButton();
-			this.btClear = new Mediate.ClrButton();
-			this.SuspendLayout();
-			// 
-			// txName
-			// 
-			this.txName.Location = new System.Drawing.Point(8, 16);
-			this.txName.Name = "txName";
-			this.txName.Size = new System.Drawing.Size(104, 20);
-			this.txName.TabIndex = 0;
-			this.txName.Text = "";
-			// 
-			// lsSelected
-			// 
-			this.lsSelected.Location = new System.Drawing.Point(168, 56);
-			this.lsSelected.Name = "lsSelected";
-			this.lsSelected.Size = new System.Drawing.Size(144, 173);
-			this.lsSelected.TabIndex = 2;
-			// 
-			// lsKids
-			// 
-			this.lsKids.Location = new System.Drawing.Point(8, 64);
-			this.lsKids.Name = "lsKids";
-			this.lsKids.Size = new System.Drawing.Size(136, 160);
-			this.lsKids.TabIndex = 5;
-			// 
-			// btCopy
-			// 
-			this.btCopy.Location = new System.Drawing.Point(168, 16);
-			this.btCopy.Name = "btCopy";
-			this.btCopy.Size = new System.Drawing.Size(56, 24);
-			this.btCopy.TabIndex = 6;
-			this.btCopy.Text = "Copy";
-			// 
-			// btClear
-			// 
-			this.btClear.Location = new System.Drawing.Point(240, 16);
-			this.btClear.Name = "btClear";
-			this.btClear.Size = new System.Drawing.Size(56, 24);
-			this.btClear.TabIndex = 7;
-			this.btClear.Text = "Clear";
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(320, 237);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.btClear,
-																		  this.btCopy,
-																		  this.lsKids,
-																		  this.lsSelected,
-																		  this.txName});
-			this.Name = "Form1";
-			this.Text = "Mediator Form";
-			this.ResumeLayout(false);
+            this.txName = new System.Windows.Forms.TextBox();
+            this.lsSelected = new System.Windows.Forms.ListBox();
+            this.lsKids = new Mediate.KidList();
+            this.btCopy = new Mediate.CpyButton();
+            this.btClear = new Mediate.ClrButton();
+            this.SuspendLayout();
+            // 
+            // txName
+            // 
+            this.txName.Location = new System.Drawing.Point(16, 26);
+            this.txName.Name = "txName";
+            this.txName.Size = new System.Drawing.Size(208, 28);
+            this.txName.TabIndex = 0;
+            // 
+            // lsSelected
+            // 
+            this.lsSelected.ItemHeight = 18;
+            this.lsSelected.Location = new System.Drawing.Point(336, 90);
+            this.lsSelected.Name = "lsSelected";
+            this.lsSelected.Size = new System.Drawing.Size(288, 256);
+            this.lsSelected.TabIndex = 2;
+            // 
+            // lsKids
+            // 
+            this.lsKids.ItemHeight = 18;
+            this.lsKids.Location = new System.Drawing.Point(16, 103);
+            this.lsKids.Name = "lsKids";
+            this.lsKids.Size = new System.Drawing.Size(272, 238);
+            this.lsKids.TabIndex = 5;
+            // 
+            // btCopy
+            // 
+            this.btCopy.Location = new System.Drawing.Point(336, 26);
+            this.btCopy.Name = "btCopy";
+            this.btCopy.Size = new System.Drawing.Size(112, 39);
+            this.btCopy.TabIndex = 6;
+            this.btCopy.Text = "Copy";
+            // 
+            // btClear
+            // 
+            this.btClear.Location = new System.Drawing.Point(480, 26);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(112, 39);
+            this.btClear.TabIndex = 7;
+            this.btClear.Text = "Clear";
+            // 
+            // MediatorForm
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(664, 393);
+            this.Controls.Add(this.btClear);
+            this.Controls.Add(this.btCopy);
+            this.Controls.Add(this.lsKids);
+            this.Controls.Add(this.lsSelected);
+            this.Controls.Add(this.txName);
+            this.Name = "MediatorForm";
+            this.Text = "Mediator Form";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion

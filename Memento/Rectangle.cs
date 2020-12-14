@@ -8,52 +8,67 @@ namespace CsharpPats
 	public class Rectangle
 	{
 		private int xp, yp, wr, hr;
-		public Rectangle(int x, int y, int w, int h) {
+		public Rectangle(int x, int y, int w, int h) 
+		{
 			xp = x;
 			yp = y;
 			wr = w;
 			hr = h;
 		}
-		public Rectangle(float x, float y, float w, float h) {
+		public Rectangle(float x, float y, float w, float h) 
+		{
 			xp = (int)x;
 			yp = (int)y;
 			wr = (int)w;
 			hr = (int)h;
 		}
-		public bool contains(int x, int y) {
+		public bool contains(int x, int y) 
+		{
 			bool cn = xp <= x && x <= xp + wr;
             cn = cn && yp <= y && y <= yp + hr;
             return cn;
 		}
-		public int x {
-			get{
+		public int x 
+		{
+			get
+			{
 				return xp;
 			}
-			set {
+			set 
+			{
 				xp = value;
 			}
 		}
-		public int y {
-			get{
+		public int y 
+		{
+			get
+			{
 				return yp;
 			}
-			set {
+			set 
+			{
 				yp = value;
 			}
 		}
-		public int w {
-			get{
+		public int w 
+		{
+			get
+			{
 				return wr;
 			}
-			set {
+			set 
+			{
 				wr = value;
 			}
 		}
-		public int h {
-			get{
+		public int h 
+		{
+			get
+			{
 				return hr;
 			}
-			set {
+			set 
+			{
 				hr = value;
 			}
 		}

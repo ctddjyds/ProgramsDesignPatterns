@@ -24,13 +24,15 @@ namespace Composite
 		private System.Windows.Forms.Button btShowBoss;
 		private Random rand;
 	
-		private void init() {
+		private void init() 
+		{
 			rand = new Random ();
 			buildEmployeeList();
 			buildTree();
 		}
 		//---------------
-		private void buildEmployeeList() {
+		private void buildEmployeeList() 
+		{
 			prez = new Boss(null, "CEO", 200000);
 			marketVP = new Boss(prez, "Marketing VP", 100000);
 			prez.add(marketVP);
@@ -43,7 +45,8 @@ namespace Composite
 			advMgr.add("Secy", 20000);
 
 			//add salesmen reporting to sales manager
-			for (int i = 1; i<=5; i++){
+			for (int i = 1; i<=5; i++)
+			{
 				salesMgr.add("Sales" + i.ToString(), rand_sal(30000));
 			}
 
@@ -52,15 +55,18 @@ namespace Composite
 			prodVP.add(prodMgr);
 			prodVP.add(shipMgr);
 
-			for (int i = 1; i<=3; i++){
+			for (int i = 1; i<=3; i++)
+			{
 				shipMgr.add("Ship" + i.ToString(), rand_sal(25000));
 			}
-			for (int i = 1; i<=4; i++){
+			for (int i = 1; i<=4; i++)
+			{
 				prodMgr.add("Manuf" + i.ToString(), rand_sal(20000));
 			}
 		}
 		//-----
-		private void buildTree() {
+		private void buildTree() 
+		{
 			EmpNode nod;
 
 			nod = new EmpNode(prez);
@@ -70,36 +76,41 @@ namespace Composite
 		}
 		
 		//------
-		private void getNodeSum(EmpNode node) {
+		private void getNodeSum(EmpNode node) 
+		{
 			IEmployee emp;
 			float sum;
 
-        emp = node.getEmployee();
-        sum = emp.getSalaries();
-        lbSalary.Text = sum.ToString ();
+			emp = node.getEmployee();
+			sum = emp.getSalaries();
+			lbSalary.Text = sum.ToString ();
 		}
 		//------
-		private void addNodes(EmpNode nod, IEmployee emp) {
-		IEmployee newEmp;
-        EmpNode newNode;
-        IEnumerator empEnum;
-        empEnum = emp.getSubordinates();
+		private void addNodes(EmpNode nod, IEmployee emp) 
+		{
+			IEmployee newEmp;
+			EmpNode newNode;
+			IEnumerator empEnum;
+			empEnum = emp.getSubordinates();
 
-        while (empEnum.MoveNext()) {
-            newEmp = (IEmployee)empEnum.Current;
-            newNode = new EmpNode(newEmp);
-            nod.Nodes.Add(newNode);
+			while (empEnum.MoveNext()) 
+			{
+				newEmp = (IEmployee)empEnum.Current;
+				newNode = new EmpNode(newEmp);
+				nod.Nodes.Add(newNode);
 				addNodes(newNode, newEmp);
-				}
+		    }
 		}
 		//------
-		private float rand_sal(float sal) {
+		private float rand_sal(float sal) 
+		{
 			float rnum = rand.Next ();
 			rnum = rnum / Int32.MaxValue;
 			return rnum * sal / 5 + sal;
 		}
 		//------
-		public Form1() {
+		public Form1() 
+		{
 			//
 			// Required for Windows Form Designer support
 			//
@@ -113,9 +124,12 @@ namespace Composite
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		protected override void Dispose( bool disposing ) {
-			if( disposing ) {
-				if (components != null) {
+		protected override void Dispose( bool disposing ) 
+		{
+			if( disposing ) 
+			{
+				if (components != null) 
+				{
 					components.Dispose();
 				}
 			}
@@ -127,7 +141,8 @@ namespace Composite
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent() {
+		private void InitializeComponent() 
+		{
             this.lbSalary = new System.Windows.Forms.Label();
             this.EmpTree = new System.Windows.Forms.TreeView();
             this.btShowBoss = new System.Windows.Forms.Button();
@@ -136,32 +151,32 @@ namespace Composite
             // lbSalary
             // 
             this.lbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSalary.Location = new System.Drawing.Point(77, 224);
+            this.lbSalary.Location = new System.Drawing.Point(128, 336);
             this.lbSalary.Name = "lbSalary";
-            this.lbSalary.Size = new System.Drawing.Size(182, 26);
+            this.lbSalary.Size = new System.Drawing.Size(304, 39);
             this.lbSalary.TabIndex = 1;
             // 
             // EmpTree
             // 
-            this.EmpTree.Location = new System.Drawing.Point(38, 26);
+            this.EmpTree.Location = new System.Drawing.Point(63, 39);
             this.EmpTree.Name = "EmpTree";
-            this.EmpTree.Size = new System.Drawing.Size(269, 181);
+            this.EmpTree.Size = new System.Drawing.Size(449, 271);
             this.EmpTree.TabIndex = 0;
             this.EmpTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.EmpTree_AfterSelect);
             // 
             // btShowBoss
             // 
-            this.btShowBoss.Location = new System.Drawing.Point(115, 258);
+            this.btShowBoss.Location = new System.Drawing.Point(192, 387);
             this.btShowBoss.Name = "btShowBoss";
-            this.btShowBoss.Size = new System.Drawing.Size(87, 26);
+            this.btShowBoss.Size = new System.Drawing.Size(145, 39);
             this.btShowBoss.TabIndex = 2;
             this.btShowBoss.Text = "Show boss";
             this.btShowBoss.Click += new System.EventHandler(this.btShowBoss_Click);
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(322, 306);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(569, 456);
             this.Controls.Add(this.btShowBoss);
             this.Controls.Add(this.lbSalary);
             this.Controls.Add(this.EmpTree);
@@ -176,7 +191,8 @@ namespace Composite
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
-		static void Main() {
+		static void Main() 
+		{
 			Application.Run(new Form1());
 		}
 
@@ -193,11 +209,12 @@ namespace Composite
 			node = (EmpNode)EmpTree.SelectedNode;
 			IEmployee emp = node.getEmployee ();
 			string bosses = "";
-			while(emp != null) {
+			while(emp != null) 
+			{
                 bosses += emp.getName () +"\n";
 				emp = emp.getBoss();
 			}
 			MessageBox.Show (null, bosses,"Reporting chain");
-	}
+	    }
 	}
 }

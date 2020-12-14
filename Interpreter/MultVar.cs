@@ -9,20 +9,24 @@ namespace Interpreter
 	{
 		private ArrayList multVec;
 		
-		public MultVar(ParseObject v1, ParseObject v2):base("") 		{
+		public MultVar(ParseObject v1, ParseObject v2):base("") 		
+		{
 			multVec = new ArrayList ();
 			multVec.Add (v1);
 			multVec.Add (v2);
 			type = MULTVAR;
 		}
-		public MultVar() :base("") {
+		public MultVar() :base("") 
+		{
 			multVec = new ArrayList ();
 			type = MULTVAR;
 		}
-		public void add(ParseObject v) {
+		public void add(ParseObject v) 
+		{
 			multVec.Add (v);
 		}
-		public ArrayList getVector() {
+		public ArrayList getVector() 
+		{
 			return multVec;
 		}
 	}

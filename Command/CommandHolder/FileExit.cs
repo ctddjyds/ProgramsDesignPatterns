@@ -5,14 +5,17 @@ namespace CHolder
 	/// <summary>
 	/// Summary description for FileExit.
 	/// </summary>
-	public class FileExit :MenuItem, Command 	{
+	public class FileExit :MenuItem, ICommand 	
+	{
 		private Form form;
 		//----------
-		public FileExit(Form frm) :base ("Exit") {
+		public FileExit(Form frm) :base ("Exit") 
+		{
 			form = frm;
 		}
 		//----------
-		public void Execute() {
+		public void Execute() 
+		{
 			form.Close ();
 		}
 	}

@@ -29,7 +29,8 @@ namespace ListAdapter
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.Container components = null;
-		private void init() {
+		private void init() 
+        {
 			swdata = new SwimData ("swimmers.txt");
 			lskids= new ClassListAdapter (lsKids);
 			lsnewKids =  new ClassListAdapter (lsNewKids);
@@ -58,7 +59,8 @@ namespace ListAdapter
             dGrid.EndInit();
 
         }
-        private void reload() {
+        private void reload() 
+        {
 			lskids.Clear ();
             m_lsKids.Clear();
 			swdata.moveFirst ();
@@ -117,34 +119,34 @@ namespace ListAdapter
             // 
             // lsKids
             // 
-            this.lsKids.ItemHeight = 12;
-            this.lsKids.Location = new System.Drawing.Point(14, 26);
+            this.lsKids.ItemHeight = 18;
+            this.lsKids.Location = new System.Drawing.Point(23, 39);
             this.lsKids.Name = "lsKids";
-            this.lsKids.Size = new System.Drawing.Size(153, 172);
+            this.lsKids.Size = new System.Drawing.Size(255, 238);
             this.lsKids.TabIndex = 0;
             // 
             // btClone
             // 
-            this.btClone.Location = new System.Drawing.Point(173, 60);
+            this.btClone.Location = new System.Drawing.Point(288, 90);
             this.btClone.Name = "btClone";
-            this.btClone.Size = new System.Drawing.Size(57, 26);
+            this.btClone.Size = new System.Drawing.Size(95, 39);
             this.btClone.TabIndex = 2;
             this.btClone.Text = "-->";
             this.btClone.Click += new System.EventHandler(this.btClone_Click);
             // 
             // lsNewKids
             // 
-            this.lsNewKids.ItemHeight = 12;
-            this.lsNewKids.Location = new System.Drawing.Point(250, 26);
+            this.lsNewKids.ItemHeight = 18;
+            this.lsNewKids.Location = new System.Drawing.Point(417, 39);
             this.lsNewKids.Name = "lsNewKids";
-            this.lsNewKids.Size = new System.Drawing.Size(211, 172);
+            this.lsNewKids.Size = new System.Drawing.Size(351, 238);
             this.lsNewKids.TabIndex = 1;
             // 
             // putBack
             // 
-            this.putBack.Location = new System.Drawing.Point(173, 112);
+            this.putBack.Location = new System.Drawing.Point(288, 168);
             this.putBack.Name = "putBack";
-            this.putBack.Size = new System.Drawing.Size(57, 26);
+            this.putBack.Size = new System.Drawing.Size(95, 39);
             this.putBack.TabIndex = 3;
             this.putBack.Text = "<--";
             this.putBack.Click += new System.EventHandler(this.putBack_Click);
@@ -152,19 +154,19 @@ namespace ListAdapter
             // m_lsNewKids
             // 
             this.m_lsNewKids.FormattingEnabled = true;
-            this.m_lsNewKids.ItemHeight = 12;
-            this.m_lsNewKids.Location = new System.Drawing.Point(14, 216);
+            this.m_lsNewKids.ItemHeight = 18;
+            this.m_lsNewKids.Location = new System.Drawing.Point(23, 324);
             this.m_lsNewKids.Name = "m_lsNewKids";
-            this.m_lsNewKids.Size = new System.Drawing.Size(153, 160);
+            this.m_lsNewKids.Size = new System.Drawing.Size(255, 220);
             this.m_lsNewKids.TabIndex = 4;
             // 
             // m_lsKids
             // 
             this.m_lsKids.FormattingEnabled = true;
-            this.m_lsKids.ItemHeight = 12;
-            this.m_lsKids.Location = new System.Drawing.Point(250, 216);
+            this.m_lsKids.ItemHeight = 18;
+            this.m_lsKids.Location = new System.Drawing.Point(417, 324);
             this.m_lsKids.Name = "m_lsKids";
-            this.m_lsKids.Size = new System.Drawing.Size(211, 160);
+            this.m_lsKids.Size = new System.Drawing.Size(351, 220);
             this.m_lsKids.TabIndex = 5;
             // 
             // dGrid
@@ -172,25 +174,25 @@ namespace ListAdapter
             this.dGrid.CaptionVisible = false;
             this.dGrid.DataMember = "";
             this.dGrid.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dGrid.Location = new System.Drawing.Point(501, 26);
+            this.dGrid.Location = new System.Drawing.Point(835, 39);
             this.dGrid.Name = "dGrid";
-            this.dGrid.Size = new System.Drawing.Size(200, 172);
+            this.dGrid.Size = new System.Drawing.Size(333, 258);
             this.dGrid.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(617, 406);
+            this.button1.Location = new System.Drawing.Point(1028, 609);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(125, 35);
             this.button1.TabIndex = 7;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // AdapterForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(757, 469);
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(1212, 673);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.m_lsKids);
             this.Controls.Add(this.m_lsNewKids);
@@ -199,7 +201,7 @@ namespace ListAdapter
             this.Controls.Add(this.lsNewKids);
             this.Controls.Add(this.lsKids);
             this.Controls.Add(this.dGrid);
-            this.Name = "Form1";
+            this.Name = "AdapterForm";
             this.Text = "List adapter";
             ((System.ComponentModel.ISupportInitialize)(this.dGrid)).EndInit();
             this.ResumeLayout(false);
@@ -218,9 +220,11 @@ namespace ListAdapter
             Application.Run(new AdapterForm());
 		}
 
-		private void btClone_Click(object sender, EventArgs e) {
+		private void btClone_Click(object sender, EventArgs e) 
+        {
 			int i = lskids.SelectedIndex ();
-			if( i >= 0) {
+			if( i >= 0) 
+            {
 				Swimmer sw = swdata.getSwimmer (i);
 				lsnewKids.Add (sw.getName() +"\t"+sw.getTime ());
                 m_lsNewKids.Add(sw);
@@ -230,11 +234,13 @@ namespace ListAdapter
 			}
 		}
 
-		private void btBack_Click(object sender, System.EventArgs e) {
+		private void btBack_Click(object sender, System.EventArgs e) 
+        {
 			reload();
 		}
 
-		private void putBack_Click(object sender, EventArgs e) {
+		private void putBack_Click(object sender, EventArgs e) 
+        {
 			int i = lsnewKids.SelectedIndex ();
 			if(i >= 0)
 				lsNewKids.Items.RemoveAt (i); 

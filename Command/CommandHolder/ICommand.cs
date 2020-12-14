@@ -5,7 +5,7 @@ namespace CHolder
 	/// <summary>
 	/// defines Command interface
 	/// </summary>
-	public interface Command
+	public interface ICommand
     {
 		void Execute();
 	}

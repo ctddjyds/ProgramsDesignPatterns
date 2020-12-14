@@ -54,7 +54,7 @@ namespace CHolder
 			mnuFex.Click += evh;		//add same handler
 		}
 		private void commandClick(object sender, EventArgs e) {
-			Command comd = ((ICommandHolder)sender).getCommand ();
+			ICommand comd = ((ICommandHolder)sender).getCommand ();
 			comd.Execute ();
 		}
 
@@ -80,26 +80,25 @@ namespace CHolder
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btRed = new ComdButton();
-			this.SuspendLayout();
-			// 
-			// btRed
-			// 
-			this.btRed.Location = new System.Drawing.Point(104, 64);
-			this.btRed.Name = "btRed";
-			this.btRed.Size = new System.Drawing.Size(72, 32);
-			this.btRed.TabIndex = 0;
-			this.btRed.Text = "Red";
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(280, 173);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.btRed});
-			this.Name = "Form1";
-			this.Text = "Command Holder demo";
-			this.ResumeLayout(false);
+            this.btRed = new CHolder.ComdButton();
+            this.SuspendLayout();
+            // 
+            // btRed
+            // 
+            this.btRed.Location = new System.Drawing.Point(208, 103);
+            this.btRed.Name = "btRed";
+            this.btRed.Size = new System.Drawing.Size(144, 52);
+            this.btRed.TabIndex = 0;
+            this.btRed.Text = "Red";
+            // 
+            // Form1
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(10, 21);
+            this.ClientSize = new System.Drawing.Size(514, 274);
+            this.Controls.Add(this.btRed);
+            this.Name = "Form1";
+            this.Text = "Command Holder demo";
+            this.ResumeLayout(false);
 
 		}
 		#endregion

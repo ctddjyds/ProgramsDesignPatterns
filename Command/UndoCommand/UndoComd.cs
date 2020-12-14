@@ -18,7 +18,8 @@ namespace CommandUndo
 		//-----
 		public void add(ICommand comd)
         {
-			if(! comd.isUndo ()) {
+			if(! comd.isUndo ()) 
+			{
 				undoList.Add (comd);
 			}
 		}
@@ -33,7 +34,8 @@ namespace CommandUndo
 		public void Execute()
         {
 			int index = undoList.Count - 1;
-			if (index >= 0) {
+			if (index >= 0) 
+			{
 				ICommand cmd = (ICommand)undoList[index];
 				cmd.Undo();
 				undoList.RemoveAt(index);

@@ -18,10 +18,12 @@ namespace CommandUndo
 		private System.ComponentModel.Container components = null;
 		private ICommand command;
 		
-		public void setCommand(ICommand comd) {
+		public void setCommand(ICommand comd) 
+		{
 			command = comd;
 		}
-		public ICommand getCommand() {
+		public ICommand getCommand() 
+		{
 			return command;
 		}
 		/// <summary> 

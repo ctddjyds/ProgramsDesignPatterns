@@ -20,11 +20,13 @@ namespace FileredIterator
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 		private KidData kdata;
-		public IteratorForm() {
+		public IteratorForm() 
+		{
 			InitializeComponent();
 			init();
 		}
-		private void init() {
+		private void init() 
+		{
 			kdata = new KidData("50free.txt");
 			KidIterator kiter = kdata.getIterator ();
 			while(kiter.MoveNext() )
@@ -43,9 +45,12 @@ namespace FileredIterator
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		protected override void Dispose( bool disposing ) {
-			if( disposing ) {
-				if (components != null) {
+		protected override void Dispose( bool disposing ) 
+		{
+			if( disposing ) 
+			{
+				if (components != null) 
+				{
 					components.Dispose();
 				}
 			}
@@ -57,7 +62,8 @@ namespace FileredIterator
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent() {
+		private void InitializeComponent() 
+		{
             this.lsKids = new System.Windows.Forms.ListBox();
             this.lsClubKids = new System.Windows.Forms.ListBox();
             this.cbClubs = new System.Windows.Forms.ComboBox();
@@ -106,18 +112,20 @@ namespace FileredIterator
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
-		static void Main() {
+		static void Main() 
+		{
 			Application.Run(new IteratorForm());
 		}
 
-		private void cbClubs_SelectedIndexChanged(object sender, System.EventArgs e) {
+		private void cbClubs_SelectedIndexChanged(object sender, System.EventArgs e) 
+		{
 			string club = (String)cbClubs.SelectedItem ;
 			FilteredIterator iter = kdata.getFilteredIterator ( club);
 			lsClubKids.Items.Clear ();
-			while(iter.MoveNext() ) {
+			while(iter.MoveNext() ) 
+			{
 				Kid kd = (Kid) iter.Current;
 				lsClubKids.Items.Add (kd.getFrname() +" "+kd.getLname ());
-
 			}
 		}
 	}

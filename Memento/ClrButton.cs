@@ -18,12 +18,14 @@ namespace Memento
 		private System.ComponentModel.Container components = null;
 		private Mediator med;
 		//-----
-		public ClrButton(Mediator md) 		{
+		public ClrButton(Mediator md) 		
+		{
 			InitializeComponent();
 			med = md;
 		}
 		//-----
-		public void Execute() {
+		public void Execute() 
+		{
 			med.clear ();
 		}
 

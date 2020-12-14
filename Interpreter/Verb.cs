@@ -9,14 +9,17 @@ namespace Interpreter
 	{
 		protected Data data;
 		protected ListBox ptable;
-		public Verb(string s, Data dt, ListBox pt) :base(s, dt, pt) 		{
+		public Verb(string s, Data dt, ListBox pt) :base(s, dt, pt) 		
+		{
 			setData(dt, pt);
 		}
-		public void setData(Data dt, ListBox pt) {
+		public void setData(Data dt, ListBox pt) 
+		{
 			data = dt;
 			ptable = pt;
 		}
-		public virtual void Execute() {
+		public virtual void Execute() 
+		{
 			//do nothing
 		}
 	}

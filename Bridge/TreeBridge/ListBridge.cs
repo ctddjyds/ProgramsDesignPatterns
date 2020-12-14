@@ -16,7 +16,8 @@ namespace BasicBridge
 		//-----
 		public virtual void addData(ArrayList ar)
         {
-			for(int i=0; i< ar.Count ; i++) {
+			for(int i=0; i< ar.Count ; i++) 
+			{
 				Product p = (Product)ar[i];
 				vis.addLine (p);
 			}

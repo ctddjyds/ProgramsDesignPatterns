@@ -7,7 +7,7 @@ namespace CHolder
 	/// </summary>
 	public interface ICommandHolder
     {
-		Command getCommand();
-		void setCommand(Command cmd);
+		ICommand getCommand();
+		void setCommand(ICommand cmd);
 	}
 }
